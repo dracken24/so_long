@@ -6,17 +6,17 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 11:06:21 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/11 15:04:37 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/16 13:20:50 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/so_long.h"
 #include <fcntl.h>
 
-int main(int entry, char **name)
+int	main(int entry, char **name)
 {
-	t_game game;
-	t_image img;
+	t_game	game;
+	t_image	img;
 
 	ft_printf("1\n");
 	check_entry(entry, name, &game);
@@ -31,21 +31,30 @@ int main(int entry, char **name)
 void	check_entry(int entry, char **name, t_game *game)
 {
 	if (entry != 2)
-		exit(ft_printf("Error, Wrong arguments numbers"));
+	{
+		perror("Error, Wrong arguments numbers\n");
+		exit(0);
+	}
 	if (check_name(game, name[1]) == 0)
-		exit(ft_printf("Error, Invalid files <name>.ber"));
+	{
+		perror("Error, Invalid files <name>.ber\n");
+		exit(0);
+	}
 	save_map(game, name[1]);
 	check_rect(game);
+	check_board(game);
 }
 
 void	save_map(t_game *game, char *name)
 {
 	save_len(game, name);
-	game->map_0 = ft_calloc(sizeof(char), (game->len.len_map_x * game->len.len_map_y) + game->len.len_map_y + 1);
+	game->map_0 = ft_calloc(sizeof(char), (game->len.len_map_x
+				* game->len.len_map_y) + game->len.len_map_y + 1);
 	if (!game->map_0)
 	{
 		free(game->map_0);
-		exit(ft_printf("Error, wrong malloc <map_0>"));
+		perror("Error, wrong malloc <map_0>\n");
+		exit(0);
 	}
 	game->ct.i = -1;
 	while (++game->ct.i < game->len.len_map_y)
@@ -55,33 +64,11 @@ void	save_map(t_game *game, char *name)
 	free(game->tmp);
 }
 
-void	save_len(t_game *game, char *name)
-{
-	int fd;
-
-	game->tmp = ft_calloc(sizeof(char), 4096);
-	if (!game->tmp)
-	{
-		free(game->tmp);
-		exit(ft_printf("Error, wrong malloc <map_0>"));
-	}
-	fd = open(name, O_RDONLY);
-	game->ct.i = -1;
-	while (++game->ct.i >= 0)
-	{
-		game->tmp[game->ct.i] = get_next_line(fd);
-		if (!game->tmp[game->ct.i])
-			break;
-	}
-	game->len.len_map_y = game->ct.i;
-	game->len.len_map_x = ft_strlen(game->tmp[0]) - 1;
-}
-
 void	check_rect(t_game *game)
 {
-	int i;
+	int	i;
 	int	k;
-	
+
 	i = -1;
 	while (++i < game->len.len_map_y)
 	{
@@ -90,20 +77,45 @@ void	check_rect(t_game *game)
 			k++;
 		ft_printf("line_3: %s", game->map_0[i]);
 		if (k != game->len.len_map_x)
-			exit(ft_printf("Error, Map not rectangle"));
+		{
+			free(game->map_0);
+			perror("Error, Map not rectangle\n");
+			exit(0);
+		}
+	}
+	if (game->len.len_map_x > 24 || game->len.len_map_y > 14)	
+	{
+		free(game->map_0);
+		perror("Error, Map to whide/hight\n");
+		exit(0);
 	}
 }
 
-int check_name(t_game *game, char *name)
+void	check_board(t_game *game)
 {
-	game->len.len = ft_strlen(name);
-	if (name == 0)
-		return (0);
-	if (game->len.len < 5)
-		return (0);
-	if (ft_strncmp(name + game->len.len - 4, ".ber", game->len.len) != 0)
-		return (0);
-	// ft_printf("EEEE\n");
-	return (1);
-}
+	int i;
+	int k;
 
+	game->ct.error = 1;
+	i = -1;
+	while (++i < game->len.len_map_y)
+	{
+		k = -1;
+		while (game->map_0[i][++k] != '\n')
+		{
+			if (game->map_0[0][k] != CASE_1)
+				game->ct.error = 0;
+			else if (game->map_0[i][0] != CASE_1
+					|| game->map_0[i][game->len.len_map_x - 1] != CASE_1)
+				game->ct.error = 0;
+			else if (game->map_0[game->len.len_map_y - 1][k] != CASE_1)
+				game->ct.error = 0;
+		}
+	}
+	if (game->ct.error == 0)
+	{
+		free(game->map_0);
+		perror("Error, Boarder not ok\n");
+		exit(0);
+	}
+}

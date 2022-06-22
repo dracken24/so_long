@@ -6,22 +6,27 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 14:58:50 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/12 18:28:36 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/16 14:57:11 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/so_long.h"
 
-int key_press_p1(int key_code, t_game *game, t_image *img)
+int	key_press_p1(int key_code, t_game *game, t_image *img)
 {
+	img->test = 0;
+	game->test = 0;
+	ft_printf("KEY: %d\n", key_code);
 	find_player(game);
-	if (key_code == KEY_ESC)
+	if (key_code == KEY_MAC_ESC || key_code == KEY_LIN_ESC)
 	{
-		kill_game(game, img, "Merci d'avoir joué !!!");
+		kill_game(game, img, "Merci d'avoir joué !!!\n");
 	}
-	move_x(key_code, game, img);
-	move_y(key_code, game, img);
-	if (key_code == KEY_E)
+	move_x_lft(key_code, game, img);
+	move_x_ri(key_code, game, img);
+	move_y_up(key_code, game, img);
+	move_y_do(key_code, game, img);
+	if (key_code == KEY_MAC_E || key_code == KEY_LIN_E)
 	{
 		collect(game);
 		openn(game);
@@ -33,62 +38,82 @@ int key_press_p1(int key_code, t_game *game, t_image *img)
 	return (0);
 }
 
-void	move_x(int key_code, t_game *game, t_image *img)
+void	move_x_ri(int key_code, t_game *game, t_image *img)
 {
-	if (key_code == KEY_A && (game->map_0[game->p1_y][game->p1_x - 1] == '0'
-			|| game->map_0[game->p1_y][game->p1_x - 1] == 'Z'
-			|| game->map_0[game->p1_y][game->p1_x - 1] == 'E'))
-	{
-		game->ct.ct_idle.p1_dir = 6;
-		swap_tiles(key_code, game, img);
-		p1_move(game, img);
-		game->ct.ct_idle.p1_dir = 3;
-		enemy_move(game, img);
-	}
-	if (key_code == KEY_D && (game->map_0[game->p1_y][game->p1_x + 1] == '0'
+	if ((key_code == KEY_MAC_D || key_code == KEY_LIN_D)
+			&& (game->map_0[game->p1_y][game->p1_x + 1] == '0'
 			|| game->map_0[game->p1_y][game->p1_x + 1] == 'Z'
 			|| game->map_0[game->p1_y][game->p1_x + 1] == 'E'))
 	{
+		if (game->map_0[game->p1_y][game->p1_x + 1] == 'E')
+		{
+			game->ct.ct += 1;
+			kill_game(game, img, "GOOD JOB, YOU DID IT !!!!\n");
+		}
 		game->ct.ct_idle.p1_dir = 5;
 		p1_move(game, img);
-		swap_tiles(key_code, game, img);
+		swap_tiles(key_code, game);
 		game->ct.ct_idle.p1_dir = 4;
 		enemy_move(game, img);
 	}
 }
 
-void	move_y(int key_code, t_game *game, t_image *img)
+void	move_x_lft(int key_code, t_game *game, t_image *img)
 {
-	if (key_code == KEY_W && (game->map_0[game->p1_y - 1][game->p1_x] == '0'
-			|| game->map_0[game->p1_y - 1][game->p1_x] == 'Z'
-			|| game->map_0[game->p1_y - 1][game->p1_x] == 'E'))
+	if ((key_code == KEY_MAC_A || key_code == KEY_LIN_A)
+			&& (game->map_0[game->p1_y][game->p1_x - 1] == '0'
+			|| game->map_0[game->p1_y][game->p1_x - 1] == 'Z'
+			|| game->map_0[game->p1_y][game->p1_x - 1] == 'E'))
 	{
-		game->ct.ct_idle.p1_dir = 7;
-		swap_tiles(key_code, game, img);
+		if (game->map_0[game->p1_y][game->p1_x - 1] == 'E')
+		{
+			game->ct.ct += 1;
+			kill_game(game, img, "GOOD JOB, YOU DID IT !!!!\n");
+		}
+		game->ct.ct_idle.p1_dir = 6;
+		swap_tiles(key_code, game);
 		p1_move(game, img);
-		game->ct.ct_idle.p1_dir = 1;
-		enemy_move(game, img);
-	}
-	if (key_code == KEY_S && (game->map_0[game->p1_y + 1][game->p1_x] == '0'
-			|| game->map_0[game->p1_y + 1][game->p1_x] == 'Z'
-			|| game->map_0[game->p1_y + 1][game->p1_x] == 'E'))
-	{
-		game->ct.ct_idle.p1_dir = 8;
-		p1_move(game, img);
-		swap_tiles(key_code, game, img);
-		game->ct.ct_idle.p1_dir = 2;
+		game->ct.ct_idle.p1_dir = 3;
 		enemy_move(game, img);
 	}
 }
 
-void	delta_time(t_game *game, t_image *img, int nbr)
+void	move_y_up(int key_code, t_game *game, t_image *img)
 {
-	game->ct.i = -1;
-	while (++game->ct.i < nbr)
+	if ((key_code == KEY_MAC_W || key_code == KEY_LIN_W)
+			&& (game->map_0[game->p1_y - 1][game->p1_x] == '0'
+			|| game->map_0[game->p1_y - 1][game->p1_x] == 'Z'
+			|| game->map_0[game->p1_y - 1][game->p1_x] == 'E'))
 	{
-		game->ct.time = 0.0f;
-		while (game->ct.time < 200000)
-			game->ct.time += 0.01f;
+		if (game->map_0[game->p1_y - 1][game->p1_x] == 'E')
+		{
+			game->ct.ct += 1;
+			kill_game(game, img, "GOOD JOB, YOU DID IT !!!!\n");
+		}
+		game->ct.ct_idle.p1_dir = 7;
+		swap_tiles(key_code, game);
+		p1_move(game, img);
+		game->ct.ct_idle.p1_dir = 1;
+		enemy_move(game, img);
 	}
-	update(game, img);
+}
+
+void	move_y_do(int key_code, t_game *game, t_image *img)
+{
+	if ((key_code == KEY_MAC_S || key_code == KEY_LIN_S)
+			&& (game->map_0[game->p1_y + 1][game->p1_x] == '0'
+			|| game->map_0[game->p1_y + 1][game->p1_x] == 'Z'
+			|| game->map_0[game->p1_y + 1][game->p1_x] == 'E'))
+	{
+		if (game->map_0[game->p1_y + 1][game->p1_x] == 'E')
+		{
+			game->ct.ct += 1;
+			kill_game(game, img, "GOOD JOB, YOU DID IT !!!!\n");
+		}
+		game->ct.ct_idle.p1_dir = 8;
+		p1_move(game, img);
+		swap_tiles(key_code, game);
+		game->ct.ct_idle.p1_dir = 2;
+		enemy_move(game, img);
+	}
 }

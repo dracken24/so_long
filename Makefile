@@ -6,7 +6,7 @@
 #    By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/11 12:00:19 by nadesjar          #+#    #+#              #
-#    Updated: 2022/06/12 12:03:39 by nadesjar         ###   ########.fr        #
+#    Updated: 2022/06/20 00:55:27 by nadesjar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ PATH_GNL		= ./src/get_next_line/
 
 FILES	 		= $(PATH_SRC)so_long.c \
 				$(PATH_GNL)get_next_line_bonus.c $(PATH_GNL)get_next_line_utils_bonus.c \
-				$(PATH_UTILS)start.c \
+				$(PATH_UTILS)start.c $(PATH_UTILS)utils.c \
 				$(PATH_INIT)init_textures.c $(PATH_INIT)init_textures_p1.c \
 				$(PATH_INIT)init_textures_enemy.c \
 				$(PATH_MOVE)key_pressed.c $(PATH_MOVE)move_p1.c $(PATH_MOVE)move_enemy.c \
@@ -42,12 +42,11 @@ CC 				= gcc
 FLAGS 			= -Wall -Werror -Wextra
 MLXFLAG_MAC 	= -framework OpenGl -framework Cocoa
 MLXFLAG_LINUX	= -lbsd -lXext -lX11
-AR 				= ar -rcs
 
 LIBX_A_MAC 		= libs/minilibx_opengl/libmlx.a
-LIBX_A_LINUX 	= libs/minilibx-linux/libmlx.a
+LIBX_A_LINUX 	= libs/mlx_linux/libmlx.a
 
-NAME 			= so_long.a
+NAME 			= so-long
 
 PRINTF			= make_lib
 PRINTF_A		= ft_printf/libftprintf.a
@@ -56,8 +55,8 @@ REMOVE			= ./ft_printf/*.o ./ft_printf/libft/atoitoa/*.o ./ft_printf/libft/is/*.
 				./ft_printf/libft/lst/*.o ./ft_printf/libft/math/*.o \
 				./ft_printf/libft/mem_alloc/*.o ./ft_printf/libft/mem_move/*.o \
 				./ft_printf/libft/str/*.o ./ft_printf/*.a ./ft_printf/libft/*.a \
-				./src/*.o so_long gcc \
-				./libs/minilibx-linux/libmlx_Linux.a ./libs/minilibx_opengl/libmlx.a \
+				./src/*.o so_long gcc solong \
+				./libs/mlx_linux/*.a ./libs/minilibx_opengl/libmlx.a \
 
 all: $(PRINTF) $(NAME)
 
@@ -66,7 +65,7 @@ $(NAME): $(OBJS)
 	cp $(LIBX_A_LINUX) $(NAME)
 	gcc $(NAME) $(OBJS) $(LIBX_A_LINUX) $(PRINTF_A) $(FLAGS) $(MLXFLAG_LINUX) -o so_long
 	@echo $(LIGHT_GREEN)"MALADE CA A COMPILER :)"$(RESET)
-	@./so_long map/map_base_02.ber
+	@./so_long map/map_02.ber
 
 $(PATH_OBJS)%.o:	$(PATH_SRC)%.c
 	@mkdir -p $(PATH_OBJS)
@@ -79,7 +78,7 @@ $(PATH_OBJS)%.o:	$(PATH_SRC)%.c
 	
 make_lib:
 	$(MAKE) -C ./ft_printf
-	$(MAKE) -C ./libs/minilibx-linux
+	$(MAKE) -C ./libs/mlx_linux
 	
 push:
 	@(git add .)
