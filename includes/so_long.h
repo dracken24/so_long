@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 11:24:29 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/20 00:56:07 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/23 14:24:03 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,13 @@
 # include "./src/get_next_line/get_next_line_bonus.h"
 # include "./ft_printf/ft_printf.h"
 # include "imgs.h"
-// # include "./libs/minilibx_opengl/mlx.h"
-# include "../libs/mlx_linux/mlx.h"
+# include "./libs/minilibx_opengl/mlx.h"
+// # include "../libs/mlx_linux/mlx.h"
 # include <stdarg.h>
 # include <math.h>
 # include <stdlib.h>
 
-typedef enum s_keyboard
-{
+typedef enum s_keyboard {
 	KEY_LIN_A = 97,
 	KEY_LIN_D = 100,
 	KEY_LIN_S = 115,
@@ -31,7 +30,6 @@ typedef enum s_keyboard
 	KEY_LIN_E = 101,
 	KEY_LIN_SPACE = 32,
 	KEY_LIN_ESC = 65307,
-
 	KEY_MAC_A = 0,
 	KEY_MAC_D = 2,
 	KEY_MAC_S = 1,
@@ -39,9 +37,9 @@ typedef enum s_keyboard
 	KEY_MAC_E = 14,
 	KEY_MAC_SPACE = 49,
 	KEY_MAC_ESC = 53,
-} t_keyboard;
+}	t_keyboard;
 
-typedef enum s_letters{
+typedef enum s_letters {
 	CASE_0 = '0',
 	CASE_1 = '1',
 	CASE_P = 'P',
@@ -49,18 +47,18 @@ typedef enum s_letters{
 	CASE_E = 'E',
 	CASE_B = 'B',
 	CASE_Z = 'Z',
-} t_letters;
+}	t_letters;
 
-typedef struct s_take{
+typedef struct s_take {
 	int			hammer;
 }	t_take;
 
-typedef struct s_ct_dir{
+typedef struct s_ct_dir {
 	int			p1_dir;
 	int			en_dir;
 }	t_ct_dir;
 
-typedef struct s_ct{
+typedef struct s_ct {
 	int			i;
 	int			k;
 	int			ii;
@@ -72,13 +70,13 @@ typedef struct s_ct{
 	t_ct_dir	ct_idle;
 }	t_ct;
 
-typedef struct s_len{
+typedef struct s_len {
 	int			len;
 	int			len_map_x;
 	int			len_map_y;
 }	t_len;
 
-typedef struct s_game{
+typedef struct s_game {
 	void		*mlx;
 	void		*window;
 	char		**map_0;
@@ -123,8 +121,8 @@ int				update(t_game *game, t_image *img);
 int				quit_x(t_game *game);
 
 // MOVES
-void			move_enemy_x(t_game *game, t_image *img, int x, int y);
-void			move_enemy_y(t_game *game, t_image *img, int x, int y);
+void			move_enemy_x(t_game *game, int x, int y);
+void			move_enemy_y(t_game *game, int x, int y);
 void			move_x_lft(int key_code, t_game *game, t_image *img);
 void			move_x_ri(int key_code, t_game *game, t_image *img);
 void			move_y_up(int key_code, t_game *game, t_image *img);
@@ -143,7 +141,7 @@ void			enemy_move_up(t_game *game, t_image *img);
 void			enemy_move_do(t_game *game, t_image *img);
 
 int				key_press_p1(int key_code, t_game *game, t_image *img);
-int				enemy_move(t_game *game, t_image *img);
+int				enemy_move(t_game *game);
 
 // IMAGES
 void			put_texture_2(t_game *game, t_image *img, int x, int y);

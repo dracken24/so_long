@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 19:59:44 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/15 20:57:48 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/23 12:29:26 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	init_textures_p1_idle(t_game *game, t_image *img)
 {
 	int	x;
 	int	y;
-	
+
 	if (game->ct.ct_idle.p1_dir == 1)
 		img->img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
 				"./imgs/p1/idle/p1_idle_up_0.xpm", &x, &y);
@@ -35,4 +35,3 @@ void	init_textures_p1_idle(t_game *game, t_image *img)
 		img->img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
 				"./imgs/p1/idle/p1_idle_ri_0.xpm", &x, &y);
 }
-

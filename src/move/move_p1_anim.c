@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 16:41:14 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/17 11:43:06 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/23 13:44:59 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ void	p1_move_ri(t_game *game, t_image *img)
 {
 	int	x;
 	int	y;
-	
-	ft_printf("P1; ri\n");
+
 	img->img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/p1/move_ri/p1_mov_ri_0.xpm", &x, &y);
 	delta_time(game, img, game->speed_time);
@@ -45,15 +44,13 @@ void	p1_move_ri(t_game *game, t_image *img)
 	img->img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/p1/move_ri/p1_mov_ri_4.xpm", &x, &y);
 	delta_time(game, img, game->speed_time);
-	ft_printf("P1; ri\n");
 }
 
 void	p1_move_lft(t_game *game, t_image *img)
 {
-	int x;
-	int y;
-	
-	ft_printf("P1; lft\n");
+	int	x;
+	int	y;
+
 	img->img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/p1/move_lft/p1_mov_lft_0.xpm", &x, &y);
 	delta_time(game, img, game->speed_time);
@@ -69,15 +66,13 @@ void	p1_move_lft(t_game *game, t_image *img)
 	img->img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/p1/move_lft/p1_mov_lft_4.xpm", &x, &y);
 	delta_time(game, img, game->speed_time);
-	ft_printf("P1; lft\n");
 }
 
 void	p1_move_up(t_game *game, t_image *img)
 {
-	int x;
-	int y;
-	
-	ft_printf("P1; up\n");
+	int	x;
+	int	y;
+
 	img->img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/p1/move_up/p1_mov_up_0.xpm", &x, &y);
 	delta_time(game, img, game->speed_time);
@@ -93,14 +88,13 @@ void	p1_move_up(t_game *game, t_image *img)
 	img->img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/p1/move_up/p1_mov_up_4.xpm", &x, &y);
 	delta_time(game, img, game->speed_time);
-	ft_printf("P1; up\n");
 }
 
 void	p1_move_do(t_game *game, t_image *img)
 {
-	int x;
-	int y;
-	
+	int	x;
+	int	y;
+
 	ft_printf("P1; do\n");
 	img->img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/p1/move_do/p1_mov_do_0.xpm", &x, &y);

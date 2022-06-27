@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 20:07:37 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/17 11:40:48 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/23 13:51:39 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ void	init_enemy(t_game *game, t_image *img)
 
 void	init_textures_en1_idle(t_game *game, t_image *img)
 {
-	int x;
-	int y;
-	
+	int	x;
+	int	y;
+
 	if (game->ct.ct_idle.en_dir == 1)
 		img->img_pt.img_enemy = mlx_xpm_file_to_image(game->mlx,
 				"./imgs/enemy/idle/enemy_idle_up_0.xpm", &x, &y);
-	if (game->ct.ct_idle.en_dir == 2) 
+	if (game->ct.ct_idle.en_dir == 2)
 		img->img_pt.img_enemy = mlx_xpm_file_to_image(game->mlx,
 				"./imgs/enemy/idle/enemy_idle_do_0.xpm", &x, &y);
 	if (game->ct.ct_idle.en_dir == 3)

@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 11:06:21 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/16 13:20:50 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/23 13:48:45 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,8 @@ int	main(int entry, char **name)
 	t_game	game;
 	t_image	img;
 
-	ft_printf("1\n");
 	check_entry(entry, name, &game);
-	ft_printf("2\n");
 	init_var(&game, &img);
-	ft_printf("3\n");
 	init_game(&game, &img);
 	kill_game(&game, &img, "Error");
 	return (0);
@@ -75,7 +72,7 @@ void	check_rect(t_game *game)
 		k = 0;
 		while (game->map_0[i][k] != '\n')
 			k++;
-		ft_printf("line_3: %s", game->map_0[i]);
+		ft_printf("%s", game->map_0[i]);
 		if (k != game->len.len_map_x)
 		{
 			free(game->map_0);
@@ -83,7 +80,7 @@ void	check_rect(t_game *game)
 			exit(0);
 		}
 	}
-	if (game->len.len_map_x > 24 || game->len.len_map_y > 14)	
+	if (game->len.len_map_x > 24 || game->len.len_map_y > 14)
 	{
 		free(game->map_0);
 		perror("Error, Map to whide/hight\n");
@@ -93,8 +90,8 @@ void	check_rect(t_game *game)
 
 void	check_board(t_game *game)
 {
-	int i;
-	int k;
+	int	i;
+	int	k;
 
 	game->ct.error = 1;
 	i = -1;

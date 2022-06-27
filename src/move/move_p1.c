@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:33:03 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/15 19:53:59 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/23 14:23:30 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ void	swap_tiles(int key_code, t_game *game)
 	swap_y(key_code, game);
 	game->ct.i = -1;
 	while (++game->ct.i < game->len.len_map_y)
-		ft_printf("line2: %s", game->map_0[game->ct.i]);
+		ft_printf("%s", game->map_0[game->ct.i]);
 	ft_printf("MOVEMENTS: %d\n", game->ct.ct);
 }
 
 void	swap_x(int key_code, t_game *game)
 {
-	int x;
-	int y;
+	int	x;
+	int	y;
 
 	x = game->p1_x;
 	y = game->p1_y;
@@ -50,8 +50,8 @@ void	swap_x(int key_code, t_game *game)
 
 void	swap_y(int key_code, t_game *game)
 {
-	int x;
-	int y;
+	int	x;
+	int	y;
 
 	x = game->p1_x;
 	y = game->p1_y;
@@ -122,4 +122,3 @@ void	openn(t_game *game)
 		game->map_0[game->p1_y - 1][game->p1_x] = CASE_0;
 	}
 }
-

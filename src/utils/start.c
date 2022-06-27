@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 15:59:51 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/20 00:57:11 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/23 14:41:40 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	xpm_to_imgs(t_game *game, t_image *img)
 			"./imgs/take.xpm", &x, &y);
 	img->img_pt.img_block = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/break.xpm", &x, &y);
-	// ft_printf("HELPxpm;\n");
 }
 
 int	update(t_game *game, t_image *img)
@@ -37,11 +36,8 @@ int	update(t_game *game, t_image *img)
 	char	*ct;
 	int		x;
 	int		y;
-	
-	// ft_printf("HELP;\n");
+
 	xpm_to_imgs(game, img);
-	init_p1(game, img);
-	init_enemy(game, img);
 	put_texture_1(game, img);
 	ct = ft_itoa(game->ct.ct);
 	x = game->len.len_map_x * game->tile_size / 2 - 24;
@@ -59,9 +55,9 @@ void	init_game(t_game *game, t_image *img)
 	x = game->len.len_map_x * game->tile_size;
 	y = game->len.len_map_y * game->tile_size;
 	game->mlx = mlx_init();
-	game->window = mlx_new_window(game->mlx, x, y + 24, "YO MADAFAKA");
+	game->window = mlx_new_window(game->mlx, x, y + 24, "so_long");
 	update(game, img);
-	mlx_key_hook(game->window, key_press_p1, game);
+	mlx_hook(game->window, 2, 1L << 0, key_press_p1, game);
 	mlx_hook(game->window, 17, 0, quit_x, game);
 	mlx_loop(game->mlx);
 }
@@ -75,6 +71,5 @@ void	init_var(t_game *game, t_image *img)
 	game->ct.ct_enemy = 0;
 	game->ct.ct_idle.p1_dir = 2;
 	game->ct.ct_idle.en_dir = 2;
-	game->speed_time = 3.0f;
-	ft_printf("len_x: %d len_y: %d\n", game->len.len_map_x, game->len.len_map_y);
+	game->speed_time = 1.0f;
 }

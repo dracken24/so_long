@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 11:11:19 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/15 18:59:40 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/23 13:43:30 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,9 @@ void	delta_time(t_game *game, t_image *img, int nbr)
 	while (++game->ct.i < nbr)
 	{
 		game->ct.time = 0.0f;
-		while (game->ct.time < 200000)
+		while (game->ct.time < 200)
 			game->ct.time += 0.01f;
 	}
-	ft_printf("DELTA; \n");
 	update(game, img);
 }
 
