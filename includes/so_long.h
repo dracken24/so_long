@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 11:24:29 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/23 14:24:03 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/27 16:39:00 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,6 +150,8 @@ void			put_pix(t_game *game, t_image *img, int color);
 void			init_p1(t_game *game, t_image *img);
 
 void			init_textures_en1_idle(t_game *game, t_image *img);
+void			change_idle_enemy(t_game *game, t_image *img);
+void			change_idle_p1(t_game *game, t_image *img);
 void			init_enemy(t_game *game, t_image *img);
 
 void			xpm_to_imgs(t_game *game, t_image *img);

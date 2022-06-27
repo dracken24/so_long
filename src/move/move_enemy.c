@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 09:32:54 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/23 14:32:14 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/27 15:27:24 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	move_enemy_x(t_game *game, int x, int y)
 {
 	int	ct;
 
-	ct = game->ct.ct + game->p1_x * game->m;
+	ct = game->ct.ct + game->p1_x + game->p1_y;
 	if ((game->map_0[y][x + 1] == '0' || game->map_0[y][x + 1] == 'P')
 			&& (ct % 30 == 3 || ct % 30 == 14 || ct % 30 == 30))
 	{
@@ -50,9 +50,9 @@ void	move_enemy_y(t_game *game, int x, int y)
 {
 	int	ct;
 
-	ct = game->ct.ct + game->p1_x * game->m;
+	ct = game->ct.ct + game->p1_x + game->p1_y;
 	if ((game->map_0[y - 1][x] == '0' || game->map_0[y - 1][x] == 'P')
-			&& (ct % 30 == 6 || ct % 30 == 12 || ct % 30 == 28))
+			&& (ct % 30 == 7 || ct % 30 == 13 || ct % 30 == 27))
 	{
 		game->map_0[y][x] = CASE_0;
 		game->map_0[y - 1][x] = CASE_Z;

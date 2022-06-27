@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 17:51:04 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/14 22:16:44 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/27 15:53:41 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ typedef struct s_img_pt{
 }	t_img_pt;
 
 typedef struct s_idle{
-	char		*idle_up;
-	char		*idle_do;
-	char		*idle_lft;
-	char		*idle_ri;
+	void		*idle_up;
+	void		*idle_do;
+	void		*idle_lft;
+	void		*idle_ri;
 }	t_idle;
 
 typedef struct s_imgs{

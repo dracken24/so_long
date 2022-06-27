@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 14:58:50 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/23 14:32:31 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/27 16:13:48 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,31 @@ int	key_press_p1(int key_code, t_game *game, t_image *img)
 {
 	img->test = 0;
 	game->test = 0;
+	ft_printf("KEYPRESS: 1\n");
 	find_player(game);
+	ft_printf("KEYPRESS: 2\n");
 	if (key_code == KEY_MAC_ESC || key_code == KEY_LIN_ESC)
 	{
 		kill_game(game, img, "Merci d'avoir joué !!!\n");
 	}
+
+	ft_printf("KEYPRESS: 3\n");
 	move_x_lft(key_code, game, img);
+	ft_printf("KEYPRESS: 4\n");
 	move_x_ri(key_code, game, img);
+	ft_printf("KEYPRESS: 5\n");
 	move_y_up(key_code, game, img);
+	ft_printf("KEYPRESS: 6\n");
 	move_y_do(key_code, game, img);
+	ft_printf("KEYPRESS: 7\n");
 	if (key_code == KEY_MAC_E || key_code == KEY_LIN_E)
 	{
 		collect(game);
 		openn(game);
 	}
+	ft_printf("KEYPRESS: 8\n");
 	kill_p1(game, img);
+	ft_printf("KEYPRESS: 9\n");
 	update(game, img);
 	ft_printf("PLAYER_POS_Y: %d  PLAYER_POS_X: %d\n", game->p1_y, game->p1_x);
 	return (0);

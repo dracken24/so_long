@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 15:59:51 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/23 14:41:40 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/27 16:39:11 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,14 @@ int	update(t_game *game, t_image *img)
 	int		x;
 	int		y;
 
-	xpm_to_imgs(game, img);
+	// xpm_to_imgs(game, img);
+	ft_printf("UPDATE: 1\n");
+	change_idle_p1(game, img);
+	ft_printf("UPDATE: 2\n");
+	change_idle_enemy(game, img);
+	ft_printf("UPDATE: 3\n");
 	put_texture_1(game, img);
+	ft_printf("UPDATE: 4\n");
 	ct = ft_itoa(game->ct.ct);
 	x = game->len.len_map_x * game->tile_size / 2 - 24;
 	y = game->len.len_map_y * game->tile_size + 16;
@@ -51,14 +57,16 @@ void	init_game(t_game *game, t_image *img)
 {
 	int	x;
 	int	y;
-
+	
 	x = game->len.len_map_x * game->tile_size;
 	y = game->len.len_map_y * game->tile_size;
 	game->mlx = mlx_init();
 	game->window = mlx_new_window(game->mlx, x, y + 24, "so_long");
+	xpm_to_imgs(game, img);
 	update(game, img);
-	mlx_hook(game->window, 2, 1L << 0, key_press_p1, game);
+	mlx_key_hook(game->window, key_press_p1, game);
 	mlx_hook(game->window, 17, 0, quit_x, game);
+	// mlx_loop_hook(game->mlx, update, game);
 	mlx_loop(game->mlx);
 }
 

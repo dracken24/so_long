@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 11:06:21 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/23 13:48:45 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/27 15:49:42 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ int	main(int entry, char **name)
 	t_game	game;
 	t_image	img;
 
+	// ft_printf("A:\n");
 	check_entry(entry, name, &game);
+	// ft_printf("B:\n");
 	init_var(&game, &img);
 	init_game(&game, &img);
 	kill_game(&game, &img, "Error");
@@ -27,11 +29,13 @@ int	main(int entry, char **name)
 
 void	check_entry(int entry, char **name, t_game *game)
 {
+	// ft_printf("1:\n");
 	if (entry != 2)
 	{
 		perror("Error, Wrong arguments numbers\n");
 		exit(0);
 	}
+	
 	if (check_name(game, name[1]) == 0)
 	{
 		perror("Error, Invalid files <name>.ber\n");
@@ -44,7 +48,9 @@ void	check_entry(int entry, char **name, t_game *game)
 
 void	save_map(t_game *game, char *name)
 {
+	// ft_printf("2:\n");
 	save_len(game, name);
+	// ft_printf("2.1:\n");
 	game->map_0 = ft_calloc(sizeof(char), (game->len.len_map_x
 				* game->len.len_map_y) + game->len.len_map_y + 1);
 	if (!game->map_0)
@@ -59,10 +65,12 @@ void	save_map(t_game *game, char *name)
 		game->map_0[game->ct.i] = game->tmp[game->ct.i];
 	}
 	free(game->tmp);
+	// ft_printf("2.2:\n");
 }
 
 void	check_rect(t_game *game)
 {
+	// ft_printf("3:\n");
 	int	i;
 	int	k;
 
@@ -72,7 +80,7 @@ void	check_rect(t_game *game)
 		k = 0;
 		while (game->map_0[i][k] != '\n')
 			k++;
-		ft_printf("%s", game->map_0[i]);
+		// ft_printf("%s", game->map_0[i]);
 		if (k != game->len.len_map_x)
 		{
 			free(game->map_0);
@@ -90,6 +98,7 @@ void	check_rect(t_game *game)
 
 void	check_board(t_game *game)
 {
+	// ft_printf("4:\n");
 	int	i;
 	int	k;
 
