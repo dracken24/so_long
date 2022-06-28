@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 19:47:37 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/27 16:17:40 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/28 16:47:22 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	put_texture_1(t_game *game, t_image *img)
 		{
 			x = game->ct.k * game->tile_size;
 			y = game->ct.i * game->tile_size;
+			ft_printf("PLAYER_POS_Y: %d  PLAYER_POS_X: %d\n", y, x);
 			put_texture_2(game, img, x, y);
 		}
 	}
@@ -43,10 +44,10 @@ int	put_texture_1(t_game *game, t_image *img)
 
 void	put_texture_2(t_game *game, t_image *img, int x, int y)
 {
-	ft_printf("PUT_T_2: 0\n");
+	ft_printf("PUT_T_2: %p\n", img->img_wall);
 	if (game->map_0[game->ct.i][game->ct.k] == '1')
 		mlx_put_image_to_window(game->mlx, game->window,
-			img->img_pt.img_wall, x, y);
+			img->img_wall, x, y);
 	ft_printf("PUT_T_2: 1\n");
 	if (game->map_0[game->ct.i][game->ct.k] == '0')
 	{
