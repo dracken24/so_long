@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 15:59:51 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/28 16:47:32 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/28 18:02:02 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	xpm_to_imgs(t_game *game, t_image *img)
 	init_enemy(game, img);
 	img->img_pt.img_floor = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/floor.xpm", &x, &y);
-	img->img_wall = mlx_xpm_file_to_image(game->mlx,
+	img->img_pt.img_wall = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/wall.xpm", &x, &y);
 	img->img_pt.img_exit = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/exit.xpm", &x, &y);
@@ -37,7 +37,7 @@ int	update(t_game *game, t_image *img)
 	int		x;
 	int		y;
 
-	// xpm_to_imgs(game, img);
+	xpm_to_imgs(game, img);
 	ft_printf("-----------------------------------------\n");
 	change_idle_p1(game, img);
 	change_idle_enemy(game, img);

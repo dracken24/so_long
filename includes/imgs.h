@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 17:51:04 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/28 16:47:09 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/06/28 17:54:54 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ typedef struct s_vector2{
 }	t_vector2;
 
 typedef struct s_img_pt{
-	
+	void		*img_wall;
 	void		*img_floor;
 	void		*img_p1;
 	void		*img_enemy;
@@ -41,7 +41,7 @@ typedef struct s_imgs{
 }	t_imgs;
 
 typedef struct s_data{
-	void		*img_wall;
+	// void		*img_wall;
 	void		*img;
 	void		*init;
 	int			test;
