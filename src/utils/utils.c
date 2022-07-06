@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 11:11:19 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/27 15:51:37 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/06 13:03:48 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	check_name(t_game *game, char *name)
 void	save_len(t_game *game, char *name)
 {
 	int	fd;
-	// ft_printf("%s\n", name);
 	game->tmp = ft_calloc(sizeof(char), 4096);
 	if (!game->tmp)
 	{
@@ -39,9 +38,7 @@ void	save_len(t_game *game, char *name)
 	game->ct.i = -1;
 	while (++game->ct.i >= 0)
 	{
-		// ft_printf("2.2.2:\n");
 		game->tmp[game->ct.i] = get_next_line(fd);
-		// ft_printf("2.2.4:\n");
 		if (!game->tmp[game->ct.i])
 			break ;
 		ft_printf("%s", game->tmp[game->ct.i]);
@@ -49,10 +46,9 @@ void	save_len(t_game *game, char *name)
 	
 	game->len.len_map_y = game->ct.i;
 	game->len.len_map_x = ft_strlen(game->tmp[0]) - 1;
-	// ft_printf("2.2.4:\n");
 }
 
-void	delta_time(t_game *game, t_image *img, int nbr)
+void	delta_time(t_game *game, int nbr)
 {
 	game->ct.i = -1;
 	while (++game->ct.i < nbr)
@@ -61,7 +57,7 @@ void	delta_time(t_game *game, t_image *img, int nbr)
 		while (game->ct.time < 200)
 			game->ct.time += 0.01f;
 	}
-	update(game, img);
+	update(game);
 }
 
 void	find_player(t_game *game)

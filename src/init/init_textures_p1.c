@@ -6,40 +6,44 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 19:59:44 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/28 16:38:28 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/06 12:51:17 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/so_long.h"
 
-void	init_p1(t_game *game, t_image *img)
+void	init_p1(t_game *game)
 {
-	init_textures_p1_idle(game, img);
+	init_textures_p1_idle(game);
 }
 
-void	init_textures_p1_idle(t_game *game, t_image *img)
+void	init_textures_p1_idle(t_game *game)
 {
 	int	x;
 	int	y;
 
-	img->p1.idle.idle_up = mlx_xpm_file_to_image(game->mlx,
+	game->img.p1.idle.idle_up = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/p1/idle/p1_idle_up_0.xpm", &x, &y);
-	img->p1.idle.idle_do = mlx_xpm_file_to_image(game->mlx,
+	game->img.p1.idle.idle_do = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/p1/idle/p1_idle_do_0.xpm", &x, &y);
-	img->p1.idle.idle_lft = mlx_xpm_file_to_image(game->mlx,
+	game->img.p1.idle.idle_lft = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/p1/idle/p1_idle_lft_0.xpm", &x, &y);
-	img->p1.idle.idle_ri = mlx_xpm_file_to_image(game->mlx,
+	game->img.p1.idle.idle_ri = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/p1/idle/p1_idle_ri_0.xpm", &x, &y);
 }
 
-void	change_idle_p1(t_game *game, t_image *img)
+void	change_idle_p1(t_game *game, int x, int y)
 {
 	if (game->ct.ct_idle.p1_dir == 1)
-		img->img_pt.img_p1 = img->p1.idle.idle_up;
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.idle.idle_up, x, y);
 	if (game->ct.ct_idle.p1_dir == 2)
-		img->img_pt.img_p1 = img->p1.idle.idle_do;
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.idle.idle_do, x, y);
 	if (game->ct.ct_idle.p1_dir == 3)
-		img->img_pt.img_p1 = img->p1.idle.idle_lft;
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.idle.idle_lft, x, y);
 	if (game->ct.ct_idle.p1_dir == 4)
-		img->img_pt.img_p1 = img->p1.idle.idle_ri;
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.idle.idle_ri, x, y);
 }

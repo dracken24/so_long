@@ -6,7 +6,7 @@
 #    By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/11 12:00:19 by nadesjar          #+#    #+#              #
-#    Updated: 2022/06/28 18:01:45 by nadesjar         ###   ########.fr        #
+#    Updated: 2022/07/06 13:00:29 by nadesjar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,8 +62,8 @@ all: $(PRINTF) $(NAME)
 
 $(NAME): $(OBJS)
 	@echo $(LILAS)"COMPILE MOI CE SO_LONG LA..."$(RESET)
-	cp $(LIBX_A_LINUX) $(NAME)
-	gcc $(NAME) $(OBJS) $(LIBX_A_LINUX) $(PRINTF_A) $(FLAGS) $(MLXFLAG_LINUX) -o so_long
+	cp $(LIBX_A_MAC) $(NAME)
+	gcc $(NAME) $(OBJS) $(LIBX_A_MAC) $(PRINTF_A) $(FLAGS) $(MLXFLAG_MAC) -o so_long
 	@echo $(LIGHT_GREEN)"MALADE CA A COMPILER :)"$(RESET)
 	./so_long map/map_01.ber
 
@@ -78,7 +78,7 @@ $(PATH_OBJS)%.o:	$(PATH_SRC)%.c
 
 make_lib:
 	$(MAKE) -C ./ft_printf
-	$(MAKE) -C ./libs/minilibx-linux
+	$(MAKE) -C ./libs/minilibx_opengl
 
 push:
 	@(git add .)
