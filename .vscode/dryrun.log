@@ -1,226 +1,189 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/dracken24/Desktop/prog/42_en_cours/so_long'
 make -C ./ft_printf
- 
 make[1]: Entering directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/ft_printf'
 make -C ./libft
- 
 make[2]: Entering directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/ft_printf/libft'
 gcc -Wall -Werror -Wextra   -c -o math/ft_ultimate_range.o math/ft_ultimate_range.c
- 
 gcc -Wall -Werror -Wextra   -c -o math/ft_putnbr.o math/ft_putnbr.c
 gcc -Wall -Werror -Wextra   -c -o math/ft_range.o math/ft_range.c
 gcc -Wall -Werror -Wextra   -c -o math/ft_swap.o math/ft_swap.c
- 
 gcc -Wall -Werror -Wextra   -c -o math/ft_rev_int_tab.o math/ft_rev_int_tab.c
 gcc -Wall -Werror -Wextra   -c -o math/ft_nbrlen.o math/ft_nbrlen.c
- 
 gcc -Wall -Werror -Wextra   -c -o math/ft_putnbr_fd.o math/ft_putnbr_fd.c
 gcc -Wall -Werror -Wextra   -c -o math/ft_p_or_imp.o math/ft_p_or_imp.c
- 
 gcc -Wall -Werror -Wextra   -c -o mem_alloc/ft_bzero.o mem_alloc/ft_bzero.c
- 
 gcc -Wall -Werror -Wextra   -c -o mem_alloc/ft_calloc.o mem_alloc/ft_calloc.c
- 
 gcc -Wall -Werror -Wextra   -c -o lst/ft_lstmap.o lst/ft_lstmap.c
- 
 gcc -Wall -Werror -Wextra   -c -o lst/ft_lstiter.o lst/ft_lstiter.c
 gcc -Wall -Werror -Wextra   -c -o lst/ft_lstclear.o lst/ft_lstclear.c
- 
 gcc -Wall -Werror -Wextra   -c -o lst/ft_lstdelone.o lst/ft_lstdelone.c
- 
 gcc -Wall -Werror -Wextra   -c -o lst/ft_lstadd_back.o lst/ft_lstadd_back.c
 gcc -Wall -Werror -Wextra   -c -o lst/ft_lstlast.o lst/ft_lstlast.c
- 
 gcc -Wall -Werror -Wextra   -c -o lst/ft_lstsize.o lst/ft_lstsize.c
- 
 gcc -Wall -Werror -Wextra   -c -o lst/ft_lstadd_front.o lst/ft_lstadd_front.c
 gcc -Wall -Werror -Wextra   -c -o lst/ft_lstnew.o lst/ft_lstnew.c
- 
 gcc -Wall -Werror -Wextra   -c -o str/ft_strlen.o str/ft_strlen.c
- 
 gcc -Wall -Werror -Wextra   -c -o str/ft_strlcpy.o str/ft_strlcpy.c
 gcc -Wall -Werror -Wextra   -c -o str/ft_strlcat.o str/ft_strlcat.c
- 
 gcc -Wall -Werror -Wextra   -c -o str/ft_strrchr.o str/ft_strrchr.c
- 
 gcc -Wall -Werror -Wextra   -c -o str/ft_strncmp.o str/ft_strncmp.c
 gcc -Wall -Werror -Wextra   -c -o str/ft_strnstr.o str/ft_strnstr.c
- 
 gcc -Wall -Werror -Wextra   -c -o str/ft_strtrim.o str/ft_strtrim.c
 gcc -Wall -Werror -Wextra   -c -o str/ft_strmapi.o str/ft_strmapi.c
- 
 gcc -Wall -Werror -Wextra   -c -o str/ft_striteri.o str/ft_striteri.c
- 
 gcc -Wall -Werror -Wextra   -c -o str/ft_strdup.o str/ft_strdup.c
 gcc -Wall -Werror -Wextra   -c -o str/ft_substr.o str/ft_substr.c
- 
 gcc -Wall -Werror -Wextra   -c -o str/ft_strjoin.o str/ft_strjoin.c
 gcc -Wall -Werror -Wextra   -c -o str/ft_strcat.o str/ft_strcat.c
- 
 gcc -Wall -Werror -Wextra   -c -o str/ft_putchar_fd.o str/ft_putchar_fd.c
- 
 gcc -Wall -Werror -Wextra   -c -o str/ft_putstr_fd.o str/ft_putstr_fd.c
 gcc -Wall -Werror -Wextra   -c -o str/ft_toupper.o str/ft_toupper.c
- 
 gcc -Wall -Werror -Wextra   -c -o str/ft_tolower.o str/ft_tolower.c
- 
 gcc -Wall -Werror -Wextra   -c -o str/ft_putendl_fd.o str/ft_putendl_fd.c
 gcc -Wall -Werror -Wextra   -c -o str/ft_strchr.o str/ft_strchr.c
  
 gcc -Wall -Werror -Wextra   -c -o str/ft_split.o str/ft_split.c
- 
 gcc -Wall -Werror -Wextra   -c -o mem_move/ft_memset.o mem_move/ft_memset.c
- 
 gcc -Wall -Werror -Wextra   -c -o mem_move/ft_memmove.o mem_move/ft_memmove.c
 gcc -Wall -Werror -Wextra   -c -o mem_move/ft_memcmp.o mem_move/ft_memcmp.c
- 
 gcc -Wall -Werror -Wextra   -c -o mem_move/ft_memcpy.o mem_move/ft_memcpy.c
- 
 gcc -Wall -Werror -Wextra   -c -o is/ft_isalpha.o is/ft_isalpha.c
- 
 gcc -Wall -Werror -Wextra   -c -o is/ft_isdigit.o is/ft_isdigit.c
 gcc -Wall -Werror -Wextra   -c -o is/ft_isalnum.o is/ft_isalnum.c
- 
 gcc -Wall -Werror -Wextra   -c -o is/ft_isascii.o is/ft_isascii.c
 gcc -Wall -Werror -Wextra   -c -o is/ft_isprint.o is/ft_isprint.c
- 
 gcc -Wall -Werror -Wextra   -c -o atoitoa/ft_atoi.o atoitoa/ft_atoi.c
- 
 gcc -Wall -Werror -Wextra   -c -o atoitoa/ft_itoa.o atoitoa/ft_itoa.c
  
 echo [35m"LA LIBFT SE COMPILE COMME UNE GRANDE...""\033[0m"
 ar -rcs libft.a ./math/ft_ultimate_range.o ./math/ft_putnbr.o ./math/ft_range.o ./math/ft_swap.o ./math/ft_rev_int_tab.o ./math/ft_nbrlen.o ./math/ft_putnbr_fd.o ./math/ft_p_or_imp.o ./mem_alloc/ft_bzero.o ./mem_alloc/ft_calloc.o ./lst/ft_lstmap.o ./lst/ft_lstiter.o ./lst/ft_lstclear.o ./lst/ft_lstdelone.o ./lst/ft_lstadd_back.o ./lst/ft_lstlast.o ./lst/ft_lstsize.o ./lst/ft_lstadd_front.o ./lst/ft_lstnew.o ./str/ft_strlen.o ./str/ft_strlcpy.o ./str/ft_strlcat.o ./str/ft_strrchr.o ./str/ft_strncmp.o ./str/ft_strnstr.o ./str/ft_strtrim.o ./str/ft_strmapi.o ./str/ft_striteri.o ./str/ft_strdup.o ./str/ft_substr.o ./str/ft_strjoin.o ./str/ft_strcat.o ./str/ft_putchar_fd.o ./str/ft_putstr_fd.o ./str/ft_toupper.o ./str/ft_tolower.o ./str/ft_strmapi.o ./str/ft_striteri.o ./str/ft_putendl_fd.o ./str/ft_strchr.o ./str/ft_split.o ./mem_move/ft_memset.o ./mem_move/ft_memmove.o ./mem_move/ft_memcmp.o ./mem_move/ft_memcpy.o ./is/ft_isalpha.o ./is/ft_isdigit.o ./is/ft_isalnum.o ./is/ft_isascii.o ./is/ft_isprint.o ./atoitoa/ft_atoi.o ./atoitoa/ft_itoa.o
 echo [32m"LIBFT READY FOR NEXT !!!""\033[0m"
- 
 make[2]: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/ft_printf/libft'
- 
 gcc -Wall -Werror -Wextra   -c -o ft_hexa.o ft_hexa.c
- 
 gcc -Wall -Werror -Wextra   -c -o ft_printf.o ft_printf.c
- 
 gcc -Wall -Werror -Wextra   -c -o ft_put.o ft_put.c
 echo "COMPILE MOI CE PRINTF LA...""\033[0m"
 cp ./libft/libft.a libftprintf.a
 ar -rcs libftprintf.a ft_hexa.o ft_printf.o ft_put.o
 echo "MALADE CA A COMPILER !!!""\033[0m"
 make[1]: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/ft_printf'
+make -C ./libs/minilibx_opengl
  
-make -C ./libs/minilibx-linux
- 
-make[1]: Entering directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/libs/minilibx-linux'
-./configure
-make[1]: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/libs/minilibx-linux'
- 
+make[1]: Entering directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/libs/minilibx_opengl'
+cc -O2 -DSTRINGPUTX11   -c -o mlx_shaders.o mlx_shaders.c
+cc    -c -o mlx_new_window.o mlx_new_window.m
+cc    -c -o mlx_init_loop.o mlx_init_loop.m
+cc    -c -o mlx_new_image.o mlx_new_image.m
+cc -O2 -DSTRINGPUTX11   -c -o mlx_xpm.o mlx_xpm.c
+cc -O2 -DSTRINGPUTX11   -c -o mlx_int_str_to_wordtab.o mlx_int_str_to_wordtab.c
+cc -O2 -DSTRINGPUTX11   -c -o mlx_png.o mlx_png.c
+cc    -c -o mlx_mouse.o mlx_mouse.m
+ar -r libmlx.a mlx_shaders.o mlx_new_window.o mlx_init_loop.o mlx_new_image.o mlx_xpm.o mlx_int_str_to_wordtab.o mlx_png.o mlx_mouse.o
+ranlib libmlx.a
+make[1]: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/libs/minilibx_opengl'
 mkdir -p ./objs/
 mkdir -p ./objs/init
 mkdir -p ./objs/kill
 mkdir -p ./objs/move
 mkdir -p ./objs/utils
 mkdir -p ./objs/get_next_line
-gcc -Wall -Werror -Wextra -I. -c src/so_long.c -o objs/so_long.o
- 
+gcc -Wall -Wextra -I. -c src/so_long.c -o objs/so_long.o
 mkdir -p ./objs/
 mkdir -p ./objs/init
 mkdir -p ./objs/kill
 mkdir -p ./objs/move
 mkdir -p ./objs/utils
 mkdir -p ./objs/get_next_line
-gcc -Wall -Werror -Wextra -I. -c src/get_next_line/get_next_line_bonus.c -o objs/get_next_line/get_next_line_bonus.o
- 
+gcc -Wall -Wextra -I. -c src/get_next_line/get_next_line_bonus.c -o objs/get_next_line/get_next_line_bonus.o
 mkdir -p ./objs/
 mkdir -p ./objs/init
 mkdir -p ./objs/kill
 mkdir -p ./objs/move
 mkdir -p ./objs/utils
 mkdir -p ./objs/get_next_line
-gcc -Wall -Werror -Wextra -I. -c src/get_next_line/get_next_line_utils_bonus.c -o objs/get_next_line/get_next_line_utils_bonus.o
- 
+gcc -Wall -Wextra -I. -c src/get_next_line/get_next_line_utils_bonus.c -o objs/get_next_line/get_next_line_utils_bonus.o
 mkdir -p ./objs/
 mkdir -p ./objs/init
 mkdir -p ./objs/kill
 mkdir -p ./objs/move
 mkdir -p ./objs/utils
 mkdir -p ./objs/get_next_line
-gcc -Wall -Werror -Wextra -I. -c src/utils/start.c -o objs/utils/start.o
- 
-mkdir -p ./objs/
-mkdir -p ./objs/init
-mkdir -p ./objs/kill
-mkdir -p ./objs/move
- 
-mkdir -p ./objs/utils
-mkdir -p ./objs/get_next_line
-gcc -Wall -Werror -Wextra -I. -c src/init/init_textures.c -o objs/init/init_textures.o
+gcc -Wall -Wextra -I. -c src/utils/start.c -o objs/utils/start.o
 mkdir -p ./objs/
 mkdir -p ./objs/init
 mkdir -p ./objs/kill
 mkdir -p ./objs/move
 mkdir -p ./objs/utils
 mkdir -p ./objs/get_next_line
-gcc -Wall -Werror -Wextra -I. -c src/init/init_textures_p1.c -o objs/init/init_textures_p1.o
- 
+gcc -Wall -Wextra -I. -c src/utils/utils.c -o objs/utils/utils.o
 mkdir -p ./objs/
 mkdir -p ./objs/init
 mkdir -p ./objs/kill
 mkdir -p ./objs/move
 mkdir -p ./objs/utils
 mkdir -p ./objs/get_next_line
-gcc -Wall -Werror -Wextra -I. -c src/init/init_textures_enemy.c -o objs/init/init_textures_enemy.o
- 
-mkdir -p ./objs/
-mkdir -p ./objs/init
-mkdir -p ./objs/kill
-mkdir -p ./objs/move
- 
-mkdir -p ./objs/utils
-mkdir -p ./objs/get_next_line
-gcc -Wall -Werror -Wextra -I. -c src/move/key_pressed.c -o objs/move/key_pressed.o
+gcc -Wall -Wextra -I. -c src/init/init_textures.c -o objs/init/init_textures.o
 mkdir -p ./objs/
 mkdir -p ./objs/init
 mkdir -p ./objs/kill
 mkdir -p ./objs/move
 mkdir -p ./objs/utils
 mkdir -p ./objs/get_next_line
- 
-gcc -Wall -Werror -Wextra -I. -c src/move/move_p1.c -o objs/move/move_p1.o
+gcc -Wall -Wextra -I. -c src/init/init_textures_p1.c -o objs/init/init_textures_p1.o
 mkdir -p ./objs/
 mkdir -p ./objs/init
 mkdir -p ./objs/kill
 mkdir -p ./objs/move
 mkdir -p ./objs/utils
 mkdir -p ./objs/get_next_line
-gcc -Wall -Werror -Wextra -I. -c src/move/move_enemy.c -o objs/move/move_enemy.o
- 
+gcc -Wall -Wextra -I. -c src/init/init_textures_enemy.c -o objs/init/init_textures_enemy.o
 mkdir -p ./objs/
 mkdir -p ./objs/init
 mkdir -p ./objs/kill
 mkdir -p ./objs/move
 mkdir -p ./objs/utils
 mkdir -p ./objs/get_next_line
-gcc -Wall -Werror -Wextra -I. -c src/move/move_p1_anim.c -o objs/move/move_p1_anim.o
- 
+gcc -Wall -Wextra -I. -c src/move/key_pressed.c -o objs/move/key_pressed.o
 mkdir -p ./objs/
 mkdir -p ./objs/init
 mkdir -p ./objs/kill
 mkdir -p ./objs/move
 mkdir -p ./objs/utils
 mkdir -p ./objs/get_next_line
-gcc -Wall -Werror -Wextra -I. -c src/move/move_enemy_anim.c -o objs/move/move_enemy_anim.o
- 
+gcc -Wall -Wextra -I. -c src/move/move_p1.c -o objs/move/move_p1.o
 mkdir -p ./objs/
 mkdir -p ./objs/init
 mkdir -p ./objs/kill
 mkdir -p ./objs/move
 mkdir -p ./objs/utils
 mkdir -p ./objs/get_next_line
-gcc -Wall -Werror -Wextra -I. -c src/kill/kill.c -o objs/kill/kill.o
- 
+gcc -Wall -Wextra -I. -c src/move/move_enemy.c -o objs/move/move_enemy.o
+mkdir -p ./objs/
+mkdir -p ./objs/init
+mkdir -p ./objs/kill
+mkdir -p ./objs/move
+mkdir -p ./objs/utils
+mkdir -p ./objs/get_next_line
+gcc -Wall -Wextra -I. -c src/move/move_p1_anim.c -o objs/move/move_p1_anim.o
+mkdir -p ./objs/
+mkdir -p ./objs/init
+mkdir -p ./objs/kill
+mkdir -p ./objs/move
+mkdir -p ./objs/utils
+mkdir -p ./objs/get_next_line
+gcc -Wall -Wextra -I. -c src/move/move_enemy_anim.c -o objs/move/move_enemy_anim.o
+mkdir -p ./objs/
+mkdir -p ./objs/init
+mkdir -p ./objs/kill
+mkdir -p ./objs/move
+mkdir -p ./objs/utils
+mkdir -p ./objs/get_next_line
+gcc -Wall -Wextra -I. -c src/kill/kill.c -o objs/kill/kill.o
 echo [35m"COMPILE MOI CE SO_LONG LA...""\033[0m"
-cp libs/minilibx-linux/libmlx.a so_long.a
-gcc so_long.a  ./objs/so_long.o  ./objs/get_next_line/get_next_line_bonus.o  ./objs/get_next_line/get_next_line_utils_bonus.o  ./objs/utils/start.o  ./objs/init/init_textures.o  ./objs/init/init_textures_p1.o  ./objs/init/init_textures_enemy.o  ./objs/move/key_pressed.o  ./objs/move/move_p1.o  ./objs/move/move_enemy.o  ./objs/move/move_p1_anim.o  ./objs/move/move_enemy_anim.o  ./objs/kill/kill.o  libs/minilibx-linux/libmlx.a ft_printf/libftprintf.a -Wall -Werror -Wextra -lbsd -lXext -lX11 -o so_long
+cp libs/minilibx-linux/libmlx.a so-long
+gcc so-long  ./objs/so_long.o  ./objs/get_next_line/get_next_line_bonus.o  ./objs/get_next_line/get_next_line_utils_bonus.o  ./objs/utils/start.o  ./objs/utils/utils.o  ./objs/init/init_textures.o  ./objs/init/init_textures_p1.o  ./objs/init/init_textures_enemy.o  ./objs/move/key_pressed.o  ./objs/move/move_p1.o  ./objs/move/move_enemy.o  ./objs/move/move_p1_anim.o  ./objs/move/move_enemy_anim.o  ./objs/kill/kill.o  libs/minilibx-linux/libmlx.a ft_printf/libftprintf.a -Wall -Wextra -lbsd -lXext -lX11 -o so_long
 echo [32m"MALADE CA A COMPILER :)""\033[0m"
-./so_long map/map_base_02.ber
- 
+./so_long map/map_01.ber
 make: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/so_long'
  
