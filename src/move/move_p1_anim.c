@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 14:07:06 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 14:10:14 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 14:27:42 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ void	p1_move_ri(t_game *game, int x, int y)
 		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.ri.m00, x, y);
 	if (game->ct.ct_idle.p1_dir == 11)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.ri.m01, x, y);
 	if (game->ct.ct_idle.p1_dir == 12)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.ri.m02, x, y);
 	if (game->ct.ct_idle.p1_dir == 13)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.ri.m03, x, y);	
 	if (game->ct.ct_idle.p1_dir == 14)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.ri.m04, x, y);
 	game->ct.ct_idle.p1_dir++;
 	if (game->ct.ct_idle.p1_dir == 16)
@@ -44,16 +44,16 @@ void	p1_move_lft(t_game *game, int x, int y)
 		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.lft.m00, x, y);
 	if (game->ct.ct_idle.p1_dir == 21)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.lft.m01, x, y);
 	if (game->ct.ct_idle.p1_dir == 22)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.lft.m02, x, y);
 	if (game->ct.ct_idle.p1_dir == 23)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.lft.m03, x, y);	
 	if (game->ct.ct_idle.p1_dir == 24)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.lft.m04, x, y);
 	game->ct.ct_idle.p1_dir++;
 	if (game->ct.ct_idle.p1_dir == 26)
@@ -69,16 +69,16 @@ void	p1_move_up(t_game *game, int x, int y)
 		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.up.m00, x, y);
 	if (game->ct.ct_idle.p1_dir == 31)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.up.m01, x, y);
 	if (game->ct.ct_idle.p1_dir == 32)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.up.m02, x, y);
 	if (game->ct.ct_idle.p1_dir == 33)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.up.m03, x, y);	
 	if (game->ct.ct_idle.p1_dir == 34)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.up.m04, x, y);
 	game->ct.ct_idle.p1_dir++;
 	if (game->ct.ct_idle.p1_dir == 36)
@@ -95,16 +95,16 @@ void	p1_move_do(t_game *game, int x, int y)
 		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.down.m00, x, y);
 	if (game->ct.ct_idle.p1_dir == 41)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.down.m01, x, y);
 	if (game->ct.ct_idle.p1_dir == 42)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.down.m02, x, y);
 	if (game->ct.ct_idle.p1_dir == 43)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.down.m03, x, y);	
 	if (game->ct.ct_idle.p1_dir == 44)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.down.m04, x, y);
 	game->ct.ct_idle.p1_dir++;
 	if (game->ct.ct_idle.p1_dir == 46)
@@ -113,4 +113,3 @@ void	p1_move_do(t_game *game, int x, int y)
 		game->ct.ct_idle.p1_dir = 2;
 	}
 }
-

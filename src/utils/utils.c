@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 11:11:19 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 13:31:17 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 14:28:37 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ int	check_name(t_game *game, char *name)
 void	save_len(t_game *game, char *name)
 {
 	int	fd;
+
 	game->tmp = ft_calloc(sizeof(char), 4096);
 	if (!game->tmp)
 	{
 		free(game->tmp);
 		exit(ft_printf("Error, wrong malloc <map_0>"));
 	}
-	
 	fd = open(name, O_RDONLY);
 	game->ct.i = -1;
 	while (++game->ct.i >= 0)
@@ -43,7 +43,6 @@ void	save_len(t_game *game, char *name)
 			break ;
 		ft_printf("%s", game->tmp[game->ct.i]);
 	}
-	
 	game->len.len_map_y = game->ct.i;
 	game->len.len_map_x = ft_strlen(game->tmp[0]) - 1;
 }

@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 20:07:37 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 13:12:35 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 14:22:30 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,15 @@ void	init_textures_en1_idle(t_game *game)
 void	change_idle_enemy(t_game *game, int x, int y)
 {
 	if (game->ct.ct_idle.en_dir == 1)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.en.idle.idle_up, x, y);
 	if (game->ct.ct_idle.en_dir == 2)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.en.idle.idle_do, x, y);
 	if (game->ct.ct_idle.en_dir == 3)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.en.idle.idle_lft, x, y);
 	if (game->ct.ct_idle.en_dir == 4)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.en.idle.idle_ri, x, y);
 }

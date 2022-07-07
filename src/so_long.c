@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 11:06:21 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/06 13:03:10 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 14:28:45 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void	check_entry(int entry, char **name, t_game *game)
 		perror("Error, Wrong arguments numbers\n");
 		exit(0);
 	}
-	
 	if (check_name(game, name[1]) == 0)
 	{
 		perror("Error, Invalid files <name>.ber\n");

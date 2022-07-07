@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 11:24:29 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 14:02:06 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 14:24:25 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,8 +100,8 @@ typedef struct s_game {
 
 // GAME
 
-void			put_texture_suite(t_game *game, int x, int y);
 void			check_entry(int entry, char **name, t_game *game);
+void			put_texture_suite(t_game *game, int x, int y);
 void			update_move(t_game *game);
 void			swap_tiles(int key_code, t_game *game);
 void			kill_imgs(t_game *game);
@@ -146,6 +146,7 @@ int				enemy_move(t_game *game);
 
 // IMAGES
 void			put_texture_2(t_game *game, int x, int y);
+void			put_texture_suite2(t_game *game, int x, int y);
 void			init_textures_p1_idle(t_game *game);
 void			put_pix(t_game *game, int color);
 void			init_p1(t_game *game);

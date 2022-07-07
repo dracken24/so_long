@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 15:59:51 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 13:46:33 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 14:31:58 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	xpm_to_imgs(t_game *game)
 			"./imgs/take.xpm", &x, &y);
 	game->img.img_pt.img_block = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/break.xpm", &x, &y);
-	ft_printf("VOID_First: %p\n", game->img.img_pt.img_wall);
 }
 
 int	update(t_game *game)
@@ -37,10 +36,7 @@ int	update(t_game *game)
 	char	*ct;
 	int		x;
 	int		y;
-	
-	// ft_printf("-------------- ---------------- -----------\n");
-	// p1_move(game);
-	// mlx_clear_window(game->mlx, game->window);
+
 	put_texture_1(game);
 	ct = ft_itoa(game->ct.ct);
 	x = game->len.len_map_x * game->tile_size / 2 - 24;
@@ -59,6 +55,7 @@ void	init_game(t_game *game)
 	y = game->len.len_map_y * game->tile_size;
 	game->mlx = mlx_init();
 	game->window = mlx_new_window(game->mlx, x, y + 24, "so_long");
+	ft_printf("MOVEMENTS: 0\n");
 	xpm_to_imgs(game);
 	put_texture_1(game);
 	mlx_key_hook(game->window, key_press_p1, game);

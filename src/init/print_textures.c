@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 19:47:37 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 14:08:15 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 14:25:26 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ void	put_texture_suite(t_game *game, int x, int y)
 		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.img_pt.img_exit, x, y);
 	}
-
 	if (game->map_0[game->ct.i][game->ct.k] == 'P')
 	{
 		if (game->ct.ct_idle.p1_dir < 10)
@@ -85,8 +84,11 @@ void	put_texture_suite(t_game *game, int x, int y)
 				p1_move_do(game, x, y);
 		}
 	}
+	put_texture_suite2(game, x, y);
+}
 
-	
+void	put_texture_suite2(t_game *game, int x, int y)
+{
 	if (game->map_0[game->ct.i][game->ct.k] == 'Z')
 	{
 		if (game->ct.ct_idle.en_dir < 10)
@@ -103,7 +105,6 @@ void	put_texture_suite(t_game *game, int x, int y)
 				enemy_move_do(game, x, y);
 		}
 	}
-
 	if (game->map_0[game->ct.i][game->ct.k] == 'C')
 		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.img_pt.img_take, x, y);

@@ -5,77 +5,99 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/11 17:27:22 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 14:03:38 by nadesjar         ###   ########.fr       */
+/*   Created: 2022/07/07 14:20:53 by nadesjar          #+#    #+#             */
+/*   Updated: 2022/07/07 14:26:31 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/so_long.h"
 
-void	enemy_init_ri(t_game *game)
+void	enemy_move_ri(t_game *game, int x, int y)
 {
-	int	x;
-	int	y;
-
-	game->img.en.ri.m00 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_ri/enemy_move_ri_0.xpm", &x, &y);
-	game->img.en.ri.m01 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_ri/enemy_move_ri_1.xpm", &x, &y);
-	game->img.en.ri.m02 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_ri/enemy_move_ri_2.xpm", &x, &y);
-	game->img.en.ri.m03 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_ri/enemy_move_ri_3.xpm", &x, &y);
-	game->img.en.ri.m04 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_ri/enemy_move_ri_4.xpm", &x, &y);
+	x -= game->tile_size;
+	if (game->ct.ct_idle.en_dir == 10)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.ri.m00, x, y);
+	if (game->ct.ct_idle.en_dir == 11)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.ri.m01, x, y);
+	if (game->ct.ct_idle.en_dir == 12)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.ri.m02, x, y);
+	if (game->ct.ct_idle.en_dir == 13)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.ri.m03, x, y);	
+	if (game->ct.ct_idle.en_dir == 14)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.ri.m04, x, y);
+	game->ct.ct_idle.en_dir++;
+	if (game->ct.ct_idle.en_dir == 16)
+		game->ct.ct_idle.en_dir = 4;
 }
 
-void	enemy_init_lft(t_game *game)
+void	enemy_move_lft(t_game *game, int x, int y)
 {
-	int	x;
-	int	y;
-
-	game->img.en.lft.m00 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_lft/enemy_move_lft_0.xpm", &x, &y);
-	game->img.en.lft.m01 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_lft/enemy_move_lft_1.xpm", &x, &y);
-	game->img.en.lft.m02 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_lft/enemy_move_lft_2.xpm", &x, &y);
-	game->img.en.lft.m03 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_lft/enemy_move_lft_3.xpm", &x, &y);
-	game->img.en.lft.m04 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_lft/enemy_move_lft_4.xpm", &x, &y);
+	if (game->ct.ct_idle.en_dir == 20)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.lft.m00, x, y);
+	if (game->ct.ct_idle.en_dir == 21)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.lft.m01, x, y);
+	if (game->ct.ct_idle.en_dir == 22)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.lft.m02, x, y);
+	if (game->ct.ct_idle.en_dir == 23)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.lft.m03, x, y);	
+	if (game->ct.ct_idle.en_dir == 24)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.lft.m04, x, y);
+	game->ct.ct_idle.en_dir++;
+	if (game->ct.ct_idle.en_dir == 26)
+		game->ct.ct_idle.en_dir = 3;
 }
 
-void	enemy_init_up(t_game *game)
+void	enemy_move_up(t_game *game, int x, int y)
 {
-	int	x;
-	int	y;
-
-	game->img.en.up.m00 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_up/enemy_move_up_0.xpm", &x, &y);
-	game->img.en.up.m01 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_up/enemy_move_up_1.xpm", &x, &y);
-	game->img.en.up.m02 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_up/enemy_move_up_2.xpm", &x, &y);
-	game->img.en.up.m03 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_up/enemy_move_up_3.xpm", &x, &y);
-	game->img.en.up.m04 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_up/enemy_move_up_4.xpm", &x, &y);
+	if (game->ct.ct_idle.en_dir == 30)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.up.m00, x, y);
+	if (game->ct.ct_idle.en_dir == 31)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.up.m01, x, y);
+	if (game->ct.ct_idle.en_dir == 32)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.up.m02, x, y);
+	if (game->ct.ct_idle.en_dir == 33)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.up.m03, x, y);	
+	if (game->ct.ct_idle.en_dir == 34)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.up.m04, x, y);
+	game->ct.ct_idle.en_dir++;
+	if (game->ct.ct_idle.en_dir == 36)
+		game->ct.ct_idle.en_dir = 1;
 }
 
-void	enemy_init_do(t_game *game)
+void	enemy_move_do(t_game *game, int x, int y)
 {
-	int	x;
-	int	y;
-
-	game->img.en.down.m00 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_do/enemy_move_do_0.xpm", &x, &y);
-	game->img.en.down.m01 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_do/enemy_move_do_1.xpm", &x, &y);
-	game->img.en.down.m02 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_do/enemy_move_do_2.xpm", &x, &y);
-	game->img.en.down.m03 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_do/enemy_move_do_3.xpm", &x, &y);
-	game->img.en.down.m04 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/enemy/move_do/enemy_move_do_4.xpm", &x, &y);
+	y -= game->tile_size;
+	if (game->ct.ct_idle.en_dir == 40)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.down.m00, x, y);
+	if (game->ct.ct_idle.en_dir == 41)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.down.m01, x, y);
+	if (game->ct.ct_idle.en_dir == 42)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.down.m02, x, y);
+	if (game->ct.ct_idle.en_dir == 43)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.down.m03, x, y);	
+	if (game->ct.ct_idle.en_dir == 44)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.en.down.m04, x, y);
+	game->ct.ct_idle.en_dir++;
+	if (game->ct.ct_idle.en_dir == 46)
+		game->ct.ct_idle.en_dir = 2;
 }

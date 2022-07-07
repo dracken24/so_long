@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 19:59:44 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 11:48:24 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 14:22:39 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,15 @@ void	init_textures_p1_idle(t_game *game)
 void	change_idle_p1(t_game *game, int x, int y)
 {
 	if (game->ct.ct_idle.p1_dir == 1)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.idle.idle_up, x, y);
 	if (game->ct.ct_idle.p1_dir == 2)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.idle.idle_do, x, y);
 	if (game->ct.ct_idle.p1_dir == 3)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.idle.idle_lft, x, y);
 	if (game->ct.ct_idle.p1_dir == 4)
-	mlx_put_image_to_window(game->mlx, game->window,
+		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.idle.idle_ri, x, y);
 }

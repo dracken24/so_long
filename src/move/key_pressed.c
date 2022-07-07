@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 14:58:50 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 13:47:04 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 14:29:36 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	key_press_p1(int key_code, t_game *game)
 {
-	ft_printf("VOID: %p\n", game->img.img_pt.img_wall);
 	game->img.test = 0;
 	game->test = 0;
 	find_player(game);
@@ -35,9 +34,6 @@ int	key_press_p1(int key_code, t_game *game)
 		openn(game);
 	}
 	kill_p1(game);
-	// put_texture_1(game);
-
-	ft_printf("PLAYER_POS_Y: %d  PLAYER_POS_X: %d\n", game->p1_y, game->p1_x);
 	return (0);
 }
 
@@ -55,7 +51,6 @@ void	move_x_ri(int key_code, t_game *game)
 		}
 		swap_tiles(key_code, game);
 		game->ct.ct_idle.p1_dir = 10;
-		// game->ct.ct_idle.p1_dir = 4;
 		enemy_move(game);
 		game->ct.wait = 1;
 	}
@@ -75,7 +70,6 @@ void	move_x_lft(int key_code, t_game *game)
 		}
 		swap_tiles(key_code, game);
 		game->ct.ct_idle.p1_dir = 20;
-		// game->ct.ct_idle.p1_dir = 3;
 		enemy_move(game);
 		game->ct.wait = 1;
 	}
@@ -95,7 +89,6 @@ void	move_y_up(int key_code, t_game *game)
 		}
 		swap_tiles(key_code, game);
 		game->ct.ct_idle.p1_dir = 30;
-		// game->ct.ct_idle.p1_dir = 1;
 		enemy_move(game);
 		game->ct.wait = 1;
 	}
@@ -115,7 +108,6 @@ void	move_y_do(int key_code, t_game *game)
 		}
 		swap_tiles(key_code, game);
 		game->ct.ct_idle.p1_dir = 40;
-		// game->ct.ct_idle.p1_dir = 2;
 		enemy_move(game);
 		game->ct.wait = 1;
 	}
