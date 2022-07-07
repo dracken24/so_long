@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 11:11:19 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/06 13:03:48 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 13:31:17 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,18 +46,6 @@ void	save_len(t_game *game, char *name)
 	
 	game->len.len_map_y = game->ct.i;
 	game->len.len_map_x = ft_strlen(game->tmp[0]) - 1;
-}
-
-void	delta_time(t_game *game, int nbr)
-{
-	game->ct.i = -1;
-	while (++game->ct.i < nbr)
-	{
-		game->ct.time = 0.0f;
-		while (game->ct.time < 200)
-			game->ct.time += 0.01f;
-	}
-	update(game);
 }
 
 void	find_player(t_game *game)

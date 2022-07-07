@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 19:59:44 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/06 12:51:17 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 11:48:24 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 void	init_p1(t_game *game)
 {
 	init_textures_p1_idle(game);
+	p1_init_up(game);
+	p1_init_do(game);
+	p1_init_lft(game);
+	p1_init_ri(game);
 }
 
 void	init_textures_p1_idle(t_game *game)

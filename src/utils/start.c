@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 15:59:51 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/06 13:01:39 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 13:46:33 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,9 @@ int	update(t_game *game)
 	int		y;
 	
 	// ft_printf("-------------- ---------------- -----------\n");
+	// p1_move(game);
+	// mlx_clear_window(game->mlx, game->window);
+	put_texture_1(game);
 	ct = ft_itoa(game->ct.ct);
 	x = game->len.len_map_x * game->tile_size / 2 - 24;
 	y = game->len.len_map_y * game->tile_size + 16;
@@ -74,4 +77,7 @@ void	init_var(t_game *game)
 	game->ct.ct_idle.p1_dir = 2;
 	game->ct.ct_idle.en_dir = 2;
 	game->speed_time = 1.0f;
+	game->ct.move_en = 0;
+	game->ct.move_p1 = 0;
+	game->ct.wait = 0;
 }

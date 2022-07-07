@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 20:07:37 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/06 12:49:56 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 13:12:35 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 void	init_enemy(t_game *game)
 {
 	init_textures_en1_idle(game);
+	enemy_init_up(game);
+	enemy_init_do(game);
+	enemy_init_lft(game);
+	enemy_init_ri(game);
 }
 
 void	init_textures_en1_idle(t_game *game)

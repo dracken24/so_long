@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 17:51:04 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/06/29 13:01:58 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 11:20:51 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,13 @@ typedef struct s_img_pt{
 	void		*img_take;
 	void		*img_block;
 }	t_img_pt;
+typedef struct s_move {
+	void		*m00;
+	void		*m01;
+	void		*m02;
+	void		*m03;
+	void		*m04;
+}	t_move;
 
 typedef struct s_idle{
 	void		*idle_up;
@@ -38,6 +45,10 @@ typedef struct s_idle{
 typedef struct s_imgs{
 	t_idle		idle;
 	t_vector2	pos;
+	t_move		up;
+	t_move		down;
+	t_move		lft;
+	t_move		ri;
 }	t_imgs;
 
 typedef struct s_data{

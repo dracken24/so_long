@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 11:24:29 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/06 12:50:22 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 14:02:06 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,11 @@ typedef struct s_ct {
 	int			ii;
 	int			kk;
 	int			ct;
+	int			wait;
 	int			error;
 	int			ct_enemy;
+	int			move_en;
+	int			move_p1;
 	float		time;
 	t_ct_dir	ct_idle;
 }	t_ct;
@@ -99,7 +102,6 @@ typedef struct s_game {
 
 void			put_texture_suite(t_game *game, int x, int y);
 void			check_entry(int entry, char **name, t_game *game);
-void			delta_time(t_game *game, int nbr);
 void			update_move(t_game *game);
 void			swap_tiles(int key_code, t_game *game);
 void			kill_imgs(t_game *game);
@@ -129,17 +131,15 @@ void			move_x_ri(int key_code, t_game *game);
 void			move_y_up(int key_code, t_game *game);
 void			move_y_do(int key_code, t_game *game);
 
-void			p1_move_lft(t_game *game);
-void			p1_move_up(t_game *game);
-void			p1_move_do(t_game *game);
-void			p1_move_ri(t_game *game);
-void			p1_move(t_game *game);
+void			p1_move_lft(t_game *game, int x, int y);
+void			p1_move_up(t_game *game, int x, int y);
+void			p1_move_do(t_game *game, int x, int y);
+void			p1_move_ri(t_game *game, int x, int y);
 
-void			enemy_move_anim(t_game *game);
-void			enemy_move_lft(t_game *game);
-void			enemy_move_ri(t_game *game);
-void			enemy_move_up(t_game *game);
-void			enemy_move_do(t_game *game);
+void			enemy_move_lft(t_game *game, int x, int y);
+void			enemy_move_ri(t_game *game, int x, int y);
+void			enemy_move_up(t_game *game, int x, int y);
+void			enemy_move_do(t_game *game, int x, int y);
 
 int				key_press_p1(int key_code, t_game *game);
 int				enemy_move(t_game *game);
@@ -154,6 +154,16 @@ void			init_textures_en1_idle(t_game *game);
 void			change_idle_enemy(t_game *game, int x, int y);
 void			change_idle_p1(t_game *game, int x, int y);
 void			init_enemy(t_game *game);
+
+void			p1_init_up(t_game *game);
+void			p1_init_do(t_game *game);
+void			p1_init_lft(t_game *game);
+void			p1_init_ri(t_game *game);
+
+void			enemy_init_up(t_game *game);
+void			enemy_init_do(t_game *game);
+void			enemy_init_lft(t_game *game);
+void			enemy_init_ri(t_game *game);
 
 void			xpm_to_imgs(t_game *game);
 

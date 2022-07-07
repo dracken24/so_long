@@ -6,7 +6,7 @@
 #    By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/11 12:00:19 by nadesjar          #+#    #+#              #
-#    Updated: 2022/07/06 17:25:49 by nadesjar         ###   ########.fr        #
+#    Updated: 2022/07/07 14:11:00 by nadesjar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,10 +30,10 @@ PATH_GNL		= ./src/get_next_line/
 FILES	 		= $(PATH_SRC)so_long.c \
 				$(PATH_GNL)get_next_line_bonus.c $(PATH_GNL)get_next_line_utils_bonus.c \
 				$(PATH_UTILS)start.c $(PATH_UTILS)utils.c \
-				$(PATH_INIT)init_textures.c $(PATH_INIT)init_textures_p1.c \
-				$(PATH_INIT)init_textures_enemy.c \
-				$(PATH_MOVE)key_pressed.c $(PATH_MOVE)move_p1.c $(PATH_MOVE)move_enemy.c \
-				$(PATH_MOVE)move_p1_anim.c $(PATH_MOVE)move_enemy_anim.c \
+				$(PATH_INIT)print_textures.c $(PATH_INIT)init_textures_p1.c  $(PATH_INIT)init_enemy.c \
+				$(PATH_INIT)init_textures_enemy.c $(PATH_INIT)init_p1_anim.c \
+				$(PATH_MOVE)key_pressed.c $(PATH_MOVE)move_p1.c \
+				$(PATH_MOVE)move_enemy_anim.c $(PATH_MOVE)move_p1_anim.c \
 				$(PATH_KILL)kill.c \
 
 OBJS 			= $(patsubst $(PATH_SRC)%.c, $(PATH_OBJS)%.o, $(FILES)) \
@@ -62,8 +62,8 @@ all: $(PRINTF) $(NAME)
 
 $(NAME): $(OBJS)
 	@echo $(LILAS)"COMPILE MOI CE SO_LONG LA..."$(RESET)
-	cp $(LIBX_A_LINUX) $(NAME)
-	gcc $(NAME) $(OBJS) $(LIBX_A_LINUX) $(PRINTF_A) $(FLAGS) $(MLXFLAG_LINUX) -o so_long
+	cp $(LIBX_A_MAC) $(NAME)
+	gcc $(NAME) $(OBJS) $(LIBX_A_MAC) $(PRINTF_A) $(FLAGS) $(MLXFLAG_MAC) -o so_long
 	@echo $(LIGHT_GREEN)"MALADE CA A COMPILER :)"$(RESET)
 	./so_long map/map_01.ber
 

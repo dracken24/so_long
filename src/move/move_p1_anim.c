@@ -5,111 +5,112 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/11 16:41:14 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/06 12:53:06 by nadesjar         ###   ########.fr       */
+/*   Created: 2022/07/07 14:07:06 by nadesjar          #+#    #+#             */
+/*   Updated: 2022/07/07 14:10:14 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/so_long.h"
 
-void	p1_move(t_game *game)
+void	p1_move_ri(t_game *game, int x, int y)
 {
-	if (game->ct.ct_idle.p1_dir == 5)
-		p1_move_ri(game);
-	if (game->ct.ct_idle.p1_dir == 6)
-		p1_move_lft(game);
-	if (game->ct.ct_idle.p1_dir == 7)
-		p1_move_up(game);
-	if (game->ct.ct_idle.p1_dir == 8)
-		p1_move_do(game);
+	x -= game->tile_size;
+	if (game->ct.ct_idle.p1_dir == 10)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.ri.m00, x, y);
+	if (game->ct.ct_idle.p1_dir == 11)
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.ri.m01, x, y);
+	if (game->ct.ct_idle.p1_dir == 12)
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.ri.m02, x, y);
+	if (game->ct.ct_idle.p1_dir == 13)
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.ri.m03, x, y);	
+	if (game->ct.ct_idle.p1_dir == 14)
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.ri.m04, x, y);
+	game->ct.ct_idle.p1_dir++;
+	if (game->ct.ct_idle.p1_dir == 16)
+	{
+		game->ct.wait = 0;
+		game->ct.ct_idle.p1_dir = 4;
+	}
 }
 
-void	p1_move_ri(t_game *game)
+void	p1_move_lft(t_game *game, int x, int y)
 {
-	int	x;
-	int	y;
-
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_ri/p1_mov_ri_0.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_ri/p1_mov_ri_1.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_ri/p1_mov_ri_2.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_ri/p1_mov_ri_3.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_ri/p1_mov_ri_4.xpm", &x, &y);
-	delta_time(game, game->speed_time);
+	if (game->ct.ct_idle.p1_dir == 20)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.lft.m00, x, y);
+	if (game->ct.ct_idle.p1_dir == 21)
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.lft.m01, x, y);
+	if (game->ct.ct_idle.p1_dir == 22)
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.lft.m02, x, y);
+	if (game->ct.ct_idle.p1_dir == 23)
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.lft.m03, x, y);	
+	if (game->ct.ct_idle.p1_dir == 24)
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.lft.m04, x, y);
+	game->ct.ct_idle.p1_dir++;
+	if (game->ct.ct_idle.p1_dir == 26)
+	{
+		game->ct.wait = 0;
+		game->ct.ct_idle.p1_dir = 3;
+	}
 }
 
-void	p1_move_lft(t_game *game)
+void	p1_move_up(t_game *game, int x, int y)
 {
-	int	x;
-	int	y;
-
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_lft/p1_mov_lft_0.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_lft/p1_mov_lft_1.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_lft/p1_mov_lft_2.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_lft/p1_mov_lft_3.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_lft/p1_mov_lft_4.xpm", &x, &y);
-	delta_time(game, game->speed_time);
+	if (game->ct.ct_idle.p1_dir == 30)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.up.m00, x, y);
+	if (game->ct.ct_idle.p1_dir == 31)
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.up.m01, x, y);
+	if (game->ct.ct_idle.p1_dir == 32)
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.up.m02, x, y);
+	if (game->ct.ct_idle.p1_dir == 33)
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.up.m03, x, y);	
+	if (game->ct.ct_idle.p1_dir == 34)
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.up.m04, x, y);
+	game->ct.ct_idle.p1_dir++;
+	if (game->ct.ct_idle.p1_dir == 36)
+	{
+		game->ct.wait = 0;
+		game->ct.ct_idle.p1_dir = 1;
+	}
 }
 
-void	p1_move_up(t_game *game)
+void	p1_move_do(t_game *game, int x, int y)
 {
-	int	x;
-	int	y;
-
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_up/p1_mov_up_0.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_up/p1_mov_up_1.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_up/p1_mov_up_2.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_up/p1_mov_up_3.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_up/p1_mov_up_4.xpm", &x, &y);
-	delta_time(game, game->speed_time);
+	y -= game->tile_size;
+	if (game->ct.ct_idle.p1_dir == 40)
+		mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.down.m00, x, y);
+	if (game->ct.ct_idle.p1_dir == 41)
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.down.m01, x, y);
+	if (game->ct.ct_idle.p1_dir == 42)
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.down.m02, x, y);
+	if (game->ct.ct_idle.p1_dir == 43)
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.down.m03, x, y);	
+	if (game->ct.ct_idle.p1_dir == 44)
+	mlx_put_image_to_window(game->mlx, game->window,
+			game->img.p1.down.m04, x, y);
+	game->ct.ct_idle.p1_dir++;
+	if (game->ct.ct_idle.p1_dir == 46)
+	{
+		game->ct.wait = 0;
+		game->ct.ct_idle.p1_dir = 2;
+	}
 }
 
-void	p1_move_do(t_game *game)
-{
-	int	x;
-	int	y;
-
-	ft_printf("P1; do\n");
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_do/p1_mov_do_0.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_do/p1_mov_do_1.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_do/p1_mov_do_2.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_do/p1_mov_do_3.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	game->img.img_pt.img_p1 = mlx_xpm_file_to_image(game->mlx,
-			"./imgs/p1/move_do/p1_mov_do_4.xpm", &x, &y);
-	delta_time(game, game->speed_time);
-	ft_printf("P1; do\n");
-}
