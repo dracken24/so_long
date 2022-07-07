@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 11:24:29 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 15:58:37 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 19:03:33 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@
 # include "imgs.h"
 # include "./libs/minilibx_opengl/mlx.h"
 // # include "../libs/minilibx-linux/mlx.h"
-# include <stdarg.h>
-# include <math.h>
-# include <stdlib.h>
 
 typedef enum s_keyboard {
 	KEY_LIN_A = 97,
