@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 11:46:36 by marvin            #+#    #+#             */
-/*   Updated: 2022/05/07 00:02:19 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 18:50:14 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_itoa(int n)
 	char			*str;
 	long int		len;
 	unsigned int	numb;
-
+	
 	len = ft_len(n);
 	str = ft_calloc((len + 1), sizeof(char));
 	if (!(str))

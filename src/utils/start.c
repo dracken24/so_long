@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 15:59:51 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 16:12:47 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 18:57:37 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int	update(t_game *game)
 	y = game->len.len_map_y * game->tile_size + 16;
 	mlx_string_put(game->mlx, game->window, x - 24, y, 000000, "Moves:");
 	mlx_string_put(game->mlx, game->window, x + 18, y, 000000, ct);
+	free(ct);
 	return (0);
 }
 

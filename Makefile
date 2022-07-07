@@ -6,7 +6,7 @@
 #    By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/11 12:00:19 by nadesjar          #+#    #+#              #
-#    Updated: 2022/07/07 15:13:50 by nadesjar         ###   ########.fr        #
+#    Updated: 2022/07/07 18:53:51 by nadesjar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ FILES	 		= $(PATH_SRC)so_long.c \
 OBJS 			= $(patsubst $(PATH_SRC)%.c, $(PATH_OBJS)%.o, $(FILES)) \
 
 CC 				= gcc
-FLAGS 			= -Wall -Wextra
+FLAGS 			= -Wall -Wextra -Werror
 MLXFLAG_MAC 	= -framework OpenGl -framework Cocoa
 MLXFLAG_LINUX	= -lbsd -lXext -lX11
 
@@ -62,8 +62,8 @@ all: $(PRINTF) $(NAME)
 
 $(NAME): $(OBJS)
 	@echo $(LILAS)"COMPILE MOI CE SO_LONG LA..."$(RESET)
-	cp $(LIBX_A_MAC) $(NAME)
-	gcc $(NAME) $(OBJS) $(LIBX_A_MAC) $(PRINTF_A) $(FLAGS) $(MLXFLAG_MAC) -o so_long
+	cp $(LIBX_A_LINUX) $(NAME)
+	gcc $(NAME) $(OBJS) $(LIBX_A_LINUX) $(PRINTF_A) $(FLAGS) $(MLXFLAG_LINUX) -o so_long
 	@echo $(LIGHT_GREEN)"MALADE CA A COMPILER :)"$(RESET)
 	./so_long map/map_01.ber
 
