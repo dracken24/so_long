@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 11:24:29 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 15:21:18 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 15:58:37 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,8 +122,8 @@ void			kill_p1(t_game *game);
 void			collect(t_game *game);
 void			openn(t_game *game);
 
-int				kill_game(t_game *game, char *str);
 int				check_name(t_game *game, char *name);
+int				kill_game(t_game *game, char *str);
 int				update(t_game *game);
 int				quit_x(t_game *game);
 
@@ -149,25 +149,25 @@ int				key_press_p1(int key_code, t_game *game);
 int				enemy_move(t_game *game);
 
 // IMAGES
-void			put_texture_2(t_game *game, int x, int y);
 void			put_texture_suite2(t_game *game, int x, int y);
+void			put_texture_2(t_game *game, int x, int y);
 void			init_textures_p1_idle(t_game *game);
 void			put_pix(t_game *game, int color);
 void			init_p1(t_game *game);
 
-void			init_textures_en1_idle(t_game *game);
 void			change_idle_enemy(t_game *game, int x, int y);
 void			change_idle_p1(t_game *game, int x, int y);
+void			init_textures_en1_idle(t_game *game);
 void			init_enemy(t_game *game);
 
+void			p1_init_lft(t_game *game);
 void			p1_init_up(t_game *game);
 void			p1_init_do(t_game *game);
-void			p1_init_lft(t_game *game);
 void			p1_init_ri(t_game *game);
 
+void			enemy_init_lft(t_game *game);
 void			enemy_init_up(t_game *game);
 void			enemy_init_do(t_game *game);
-void			enemy_init_lft(t_game *game);
 void			enemy_init_ri(t_game *game);
 
 void			xpm_to_imgs(t_game *game);

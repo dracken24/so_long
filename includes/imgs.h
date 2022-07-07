@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 17:51:04 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 11:20:51 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 15:57:59 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ typedef struct s_imgs{
 }	t_imgs;
 
 typedef struct s_data{
-	// void		*img_wall;
 	void		*img;
 	void		*init;
 	int			test;

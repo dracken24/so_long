@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 14:07:06 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 14:27:42 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 16:13:45 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	p1_move_ri(t_game *game, int x, int y)
 			game->img.p1.ri.m02, x, y);
 	if (game->ct.ct_idle.p1_dir == 13)
 		mlx_put_image_to_window(game->mlx, game->window,
-			game->img.p1.ri.m03, x, y);	
+			game->img.p1.ri.m03, x, y);
 	if (game->ct.ct_idle.p1_dir == 14)
 		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.p1.ri.m04, x, y);
