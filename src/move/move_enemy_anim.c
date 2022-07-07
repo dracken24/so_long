@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 14:20:53 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 14:26:31 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 15:25:11 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	enemy_move_ri(t_game *game, int x, int y)
 			game->img.en.ri.m02, x, y);
 	if (game->ct.ct_idle.en_dir == 13)
 		mlx_put_image_to_window(game->mlx, game->window,
-			game->img.en.ri.m03, x, y);	
+			game->img.en.ri.m03, x, y);
 	if (game->ct.ct_idle.en_dir == 14)
 		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.en.ri.m04, x, y);
@@ -48,7 +48,7 @@ void	enemy_move_lft(t_game *game, int x, int y)
 			game->img.en.lft.m02, x, y);
 	if (game->ct.ct_idle.en_dir == 23)
 		mlx_put_image_to_window(game->mlx, game->window,
-			game->img.en.lft.m03, x, y);	
+			game->img.en.lft.m03, x, y);
 	if (game->ct.ct_idle.en_dir == 24)
 		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.en.lft.m04, x, y);
@@ -70,7 +70,7 @@ void	enemy_move_up(t_game *game, int x, int y)
 			game->img.en.up.m02, x, y);
 	if (game->ct.ct_idle.en_dir == 33)
 		mlx_put_image_to_window(game->mlx, game->window,
-			game->img.en.up.m03, x, y);	
+			game->img.en.up.m03, x, y);
 	if (game->ct.ct_idle.en_dir == 34)
 		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.en.up.m04, x, y);
@@ -93,7 +93,7 @@ void	enemy_move_do(t_game *game, int x, int y)
 			game->img.en.down.m02, x, y);
 	if (game->ct.ct_idle.en_dir == 43)
 		mlx_put_image_to_window(game->mlx, game->window,
-			game->img.en.down.m03, x, y);	
+			game->img.en.down.m03, x, y);
 	if (game->ct.ct_idle.en_dir == 44)
 		mlx_put_image_to_window(game->mlx, game->window,
 			game->img.en.down.m04, x, y);

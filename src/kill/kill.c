@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 23:19:56 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/06 12:51:28 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 15:47:06 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ int	kill_game(t_game *game, char *str)
 	game->ct.i = 1;
 	while (game->ct.i < 300000000)
 		++game->ct.i;
-	free(game->map_0);
+	free_ptr(game->map_0);
+	destroy_imgs(game);
+	mlx_destroy_window(game->mlx, game->window);
 	ft_printf("MOVEMENTS TOTAL: %d\n", game->ct.ct);
 	perror(str);
 	exit(0);
@@ -36,7 +38,9 @@ void	kill_p1(t_game *game)
 
 int	quit_x(t_game *game)
 {
-	free(game->map_0);
+	free_ptr(game->map_0);
+	destroy_imgs(game);
+	mlx_destroy_window(game->mlx, game->window);
 	perror("Merci d'avoir joué !!!\n");
 	exit(0);
 }

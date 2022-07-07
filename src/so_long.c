@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 11:06:21 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 14:28:45 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 15:43:33 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	save_map(t_game *game, char *name)
 {
 	save_len(game, name);
 	game->map_0 = ft_calloc(sizeof(char), (game->len.len_map_x
-				* game->len.len_map_y) + game->len.len_map_y + 1);
+				* game->len.len_map_y) + game->len.len_map_y);
 	if (!game->map_0)
 	{
 		free(game->map_0);

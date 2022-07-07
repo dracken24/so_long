@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 11:11:19 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 14:28:37 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 14:45:15 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,12 @@ void	save_len(t_game *game, char *name)
 		exit(ft_printf("Error, wrong malloc <map_0>"));
 	}
 	fd = open(name, O_RDONLY);
+	if (fd == -1)
+	{
+		free(game->tmp);
+		perror("Error, Invalid save_len\n");
+		exit(ft_printf("Error, wrong malloc <map_0>"));
+	}
 	game->ct.i = -1;
 	while (++game->ct.i >= 0)
 	{

@@ -2,7 +2,9 @@
     "files.associations": {
         "so_long.h": "c",
         "mlx_int.h": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "__locale": "c",
+        "ios": "c"
     },
     "C_Cpp.errorSquiggles": "Enabled",
     "C_Cpp.intelliSenseEngineFallback": "Enabled"

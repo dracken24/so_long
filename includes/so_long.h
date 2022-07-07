@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 11:24:29 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 14:24:25 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 15:21:18 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,19 +102,23 @@ typedef struct s_game {
 
 void			check_entry(int entry, char **name, t_game *game);
 void			put_texture_suite(t_game *game, int x, int y);
-void			update_move(t_game *game);
 void			swap_tiles(int key_code, t_game *game);
-void			kill_imgs(t_game *game);
-void			init_game(t_game *game);
-void			init_var(t_game *game);
-void			kill_p1(t_game *game);
 void			save_len(t_game *game, char *name);
 void			swap_x(int key_code, t_game *game);
 void			swap_y(int key_code, t_game *game);
 void			save_map(t_game *game, char *fd);
+void			destroy_enviro(t_game *game);
+void			destroy_enemy(t_game *game);
+void			destroy_imgs(t_game *game);
+void			update_move(t_game *game);
 void			check_board(t_game *game);
 void			find_player(t_game *game);
 void			check_rect(t_game *game);
+void			destroy_p1(t_game *game);
+void			kill_imgs(t_game *game);
+void			init_game(t_game *game);
+void			init_var(t_game *game);
+void			kill_p1(t_game *game);
 void			collect(t_game *game);
 void			openn(t_game *game);
 

@@ -6,7 +6,7 @@
 #    By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/11 12:00:19 by nadesjar          #+#    #+#              #
-#    Updated: 2022/07/07 14:21:43 by nadesjar         ###   ########.fr        #
+#    Updated: 2022/07/07 15:13:50 by nadesjar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ FILES	 		= $(PATH_SRC)so_long.c \
 				$(PATH_INIT)init_textures_enemy.c $(PATH_INIT)init_p1_anim.c $(PATH_INIT)init_enemy_anim.c \
 				$(PATH_MOVE)key_pressed.c $(PATH_MOVE)move_p1.c \
 				$(PATH_MOVE)move_p1_anim.c $(PATH_MOVE)move_enemy_anim.c \
-				$(PATH_KILL)kill.c \
+				$(PATH_KILL)kill.c $(PATH_KILL)destroy_imgs.c \
 
 OBJS 			= $(patsubst $(PATH_SRC)%.c, $(PATH_OBJS)%.o, $(FILES)) \
 
