@@ -6,7 +6,7 @@
 #    By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/11 12:00:19 by nadesjar          #+#    #+#              #
-#    Updated: 2022/07/07 21:03:35 by nadesjar         ###   ########.fr        #
+#    Updated: 2022/07/08 12:24:46 by nadesjar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,8 +80,8 @@ all: $(PRINTF) $(NAME)
 
 $(NAME): $(OBJS)
 	@echo $(LILAS)"COMPILE MOI CE SO_LONG LA..."$(RESET)
-	cp $(LIBX_A_LINUX) $(NAME)
-	gcc $(NAME) $(OBJS) $(LIBX_A_LINUX) $(PRINTF_A) $(FLAGS) $(MLXFLAG_LINUX) -o so_long
+	cp $(LIBX_A_MAC) $(NAME)
+	gcc $(NAME) $(OBJS) $(LIBX_A_MAC) $(PRINTF_A) $(FLAGS) $(MLXFLAG_MAC) -o so_long
 	@echo $(LIGHT_GREEN)"MALADE CA A COMPILER :)"$(RESET)
 	@./so_long map/map_base.ber
 
@@ -98,10 +98,10 @@ b:$(NAME_B)
 
 $(NAME_B): $(OBJS_B)
 	@echo $(LILAS)"COMPILE MOI CE SO_LONG LA..."$(RESET)
-	cp $(LIBX_A_LINUX) $(NAME_B)
-	gcc $(NAME_B) $(OBJS_B) $(LIBX_A_LINUX) $(PRINTF_A) $(FLAGS) $(MLXFLAG_LINUX) -o so_long_b
+	cp $(LIBX_A_MAC) $(NAME_B)
+	gcc $(NAME_B) $(OBJS_B) $(LIBX_A_MAC) $(PRINTF_A) $(FLAGS) $(MLXFLAG_MAC) -o so_long_b
 	@echo $(LIGHT_GREEN)"MALADE CA A COMPILER :)"$(RESET)
-	@./so_long_b map/map_01.ber
+	@./so_long_b map/map_02.ber
 
 $(PATH_OBJS_B)%.o:	$(PATH_SRC_B)%.c
 	@mkdir -p $(PATH_OBJS_B)
@@ -114,7 +114,7 @@ $(PATH_OBJS_B)%.o:	$(PATH_SRC_B)%.c
 
 make_lib:
 	$(MAKE) -C ./ft_printf
-	$(MAKE) -C ./libs/minilibx-linux
+	$(MAKE) -C ./libs/minilibx_opengl
 
 push:
 	@(git add .)
@@ -126,7 +126,7 @@ pull:
 
 clean:
 	@rm -f $(OBJS) $(REMOVE)
-	@rm -fr ./objs ./objs_bonus so_long_b so-long_b
+	@rm -fr ./objs ./objs_bonus so_long_b so-long_b so_long.dSYM
 	@echo $(LIGHT_GREEN)"BYE BYE"$(RESET)
 
 fclean: clean

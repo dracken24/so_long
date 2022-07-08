@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 14:58:50 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 20:11:54 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/08 12:14:57 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,10 @@ int	key_press_p1(int key_code, t_game *game)
 	{
 		kill_game(game, "Merci d'avoir joué !!!\n");
 	}
-	if (game->ct.wait == 0)
-	{
-		move_x_lft(key_code, game);
-		move_x_ri(key_code, game);
-		move_y_up(key_code, game);
-		move_y_do(key_code, game);
-	}
+	move_x_lft(key_code, game);
+	move_x_ri(key_code, game);
+	move_y_up(key_code, game);
+	move_y_do(key_code, game);
 	return (0);
 }
 
