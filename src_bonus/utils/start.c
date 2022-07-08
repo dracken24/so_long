@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 15:59:51 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 20:59:22 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 18:57:37 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	xpm_to_imgs(t_game *game)
 	int	y;
 
 	init_p1(game);
+	init_enemy(game);
 	game->img.img_pt.img_floor = mlx_xpm_file_to_image(game->mlx,
 			"./imgs/floor.xpm", &x, &y);
 	game->img.img_pt.img_wall = mlx_xpm_file_to_image(game->mlx,
@@ -32,25 +33,18 @@ void	xpm_to_imgs(t_game *game)
 
 int	update(t_game *game)
 {
+	char	*ct;
+	int		x;
+	int		y;
+
 	put_texture_1(game);
+	ct = ft_itoa(game->ct.ct);
+	x = game->len.len_map_x * game->tile_size / 2 - 24;
+	y = game->len.len_map_y * game->tile_size + 16;
+	mlx_string_put(game->mlx, game->window, x - 24, y, 000000, "Moves:");
+	mlx_string_put(game->mlx, game->window, x + 18, y, 000000, ct);
+	free(ct);
 	return (0);
-}
-
-void	find_hammer(t_game *game)
-{
-	int	i;
-	int	k;
-
-	i = -1;
-	while (game->map_0[++i])
-	{
-		k = -1;
-		while (game->map_0[i][++k])
-		{
-			if (game->map_0[i][k] == 'C')
-				game->take.nbr_hammer++;
-		}
-	}
 }
 
 void	init_game(t_game *game)
@@ -60,9 +54,8 @@ void	init_game(t_game *game)
 
 	x = game->len.len_map_x * game->tile_size;
 	y = game->len.len_map_y * game->tile_size;
-	find_hammer(game);
 	game->mlx = mlx_init();
-	game->window = mlx_new_window(game->mlx, x, y, "so_long");
+	game->window = mlx_new_window(game->mlx, x, y + 24, "so_long");
 	ft_printf("MOVEMENTS: 0\n");
 	xpm_to_imgs(game);
 	put_texture_1(game);
@@ -78,8 +71,11 @@ void	init_var(t_game *game)
 	game->ct.ct = 0;
 	game->img.pos_img.x = 0;
 	game->img.pos_img.y = 0;
+	game->ct.ct_enemy = 0;
 	game->ct.ct_idle.p1_dir = 2;
+	game->ct.ct_idle.en_dir = 2;
+	game->speed_time = 1.0f;
+	game->ct.move_en = 0;
 	game->ct.move_p1 = 0;
-	game->take.nbr_hammer = 0;
-	game->take.hammer = 0;
+	game->ct.wait = 0;
 }

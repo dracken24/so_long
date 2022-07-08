@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 11:06:21 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 19:38:22 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 15:43:33 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 int	main(int entry, char **name)
 {
 	t_game	game;
+
 	check_entry(entry, name, &game);
 	init_var(&game);
 	init_game(&game);
@@ -63,6 +64,7 @@ void	check_rect(t_game *game)
 {
 	int	i;
 	int	k;
+
 	i = -1;
 	while (++i < game->len.len_map_y)
 	{

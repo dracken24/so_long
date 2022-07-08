@@ -6,7 +6,7 @@
 #    By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/11 12:00:19 by nadesjar          #+#    #+#              #
-#    Updated: 2022/07/07 18:53:51 by nadesjar         ###   ########.fr        #
+#    Updated: 2022/07/07 21:03:35 by nadesjar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,16 +27,33 @@ PATH_MOVE		= ./src/move/
 PATH_UTILS		= ./src/utils/
 PATH_GNL		= ./src/get_next_line/
 
-FILES	 		= $(PATH_SRC)so_long.c \
+PATH_OBJS_B 	= ./objs_bonus/
+PATH_SRC_B		= ./src_bonus/
+PATH_INIT_B		= ./src_bonus/init/
+PATH_KILL_B		= ./src_bonus/kill/
+PATH_MOVE_B		= ./src_bonus/move/
+PATH_UTILS_B	= ./src_bonus/utils/
+PATH_GNL_B		= ./src_bonus/get_next_line/
+
+FILES			= $(PATH_SRC)so_long.c \
 				$(PATH_GNL)get_next_line_bonus.c $(PATH_GNL)get_next_line_utils_bonus.c \
 				$(PATH_UTILS)start.c $(PATH_UTILS)utils.c \
-				$(PATH_INIT)print_textures.c $(PATH_INIT)init_textures_p1.c  $(PATH_INIT)init_enemy.c \
-				$(PATH_INIT)init_textures_enemy.c $(PATH_INIT)init_p1_anim.c $(PATH_INIT)init_enemy_anim.c \
+				$(PATH_INIT)print_textures.c $(PATH_INIT)init_textures_p1.c \
 				$(PATH_MOVE)key_pressed.c $(PATH_MOVE)move_p1.c \
-				$(PATH_MOVE)move_p1_anim.c $(PATH_MOVE)move_enemy_anim.c \
-				$(PATH_KILL)kill.c $(PATH_KILL)destroy_imgs.c \
+				$(PATH_KILL)kill.c \
+
+FILES_BONUS	 	= $(PATH_SRC_B)so_long.c \
+				$(PATH_GNL_B)get_next_line_bonus.c $(PATH_GNL_B)get_next_line_utils_bonus.c \
+				$(PATH_UTILS_B)start.c $(PATH_UTILS_B)utils.c \
+				$(PATH_INIT_B)print_textures.c $(PATH_INIT_B)init_textures_p1.c  $(PATH_INIT_B)init_enemy.c \
+				$(PATH_INIT_B)init_textures_enemy.c $(PATH_INIT_B)init_p1_anim.c $(PATH_INIT_B)init_enemy_anim.c \
+				$(PATH_MOVE_B)key_pressed.c $(PATH_MOVE_B)move_p1.c \
+				$(PATH_MOVE_B)move_p1_anim.c $(PATH_MOVE_B)move_enemy_anim.c \
+				$(PATH_KILL_B)kill.c $(PATH_KILL_B)destroy_imgs.c \
 
 OBJS 			= $(patsubst $(PATH_SRC)%.c, $(PATH_OBJS)%.o, $(FILES)) \
+
+OBJS_B			= $(patsubst $(PATH_SRC_B)%.c, $(PATH_OBJS_B)%.o, $(FILES_BONUS)) \
 
 CC 				= gcc
 FLAGS 			= -Wall -Wextra -Werror
@@ -47,6 +64,7 @@ LIBX_A_MAC 		= libs/minilibx_opengl/libmlx.a
 LIBX_A_LINUX 	= libs/minilibx-linux/libmlx.a
 
 NAME 			= so-long
+NAME_B			= so-long_b
 
 PRINTF			= make_lib
 PRINTF_A		= ft_printf/libftprintf.a
@@ -65,7 +83,7 @@ $(NAME): $(OBJS)
 	cp $(LIBX_A_LINUX) $(NAME)
 	gcc $(NAME) $(OBJS) $(LIBX_A_LINUX) $(PRINTF_A) $(FLAGS) $(MLXFLAG_LINUX) -o so_long
 	@echo $(LIGHT_GREEN)"MALADE CA A COMPILER :)"$(RESET)
-	./so_long map/map_01.ber
+	@./so_long map/map_base.ber
 
 $(PATH_OBJS)%.o:	$(PATH_SRC)%.c
 	@mkdir -p $(PATH_OBJS)
@@ -76,9 +94,27 @@ $(PATH_OBJS)%.o:	$(PATH_SRC)%.c
 	@mkdir -p $(PATH_OBJS)get_next_line
 	$(CC) $(FLAGS) -I. -c $< -o $@
 
+b:$(NAME_B)
+
+$(NAME_B): $(OBJS_B)
+	@echo $(LILAS)"COMPILE MOI CE SO_LONG LA..."$(RESET)
+	cp $(LIBX_A_LINUX) $(NAME_B)
+	gcc $(NAME_B) $(OBJS_B) $(LIBX_A_LINUX) $(PRINTF_A) $(FLAGS) $(MLXFLAG_LINUX) -o so_long_b
+	@echo $(LIGHT_GREEN)"MALADE CA A COMPILER :)"$(RESET)
+	@./so_long_b map/map_01.ber
+
+$(PATH_OBJS_B)%.o:	$(PATH_SRC_B)%.c
+	@mkdir -p $(PATH_OBJS_B)
+	@mkdir -p $(PATH_OBJS_B)init
+	@mkdir -p $(PATH_OBJS_B)kill
+	@mkdir -p $(PATH_OBJS_B)move
+	@mkdir -p $(PATH_OBJS_B)utils
+	@mkdir -p $(PATH_OBJS_B)get_next_line
+	$(CC) $(FLAGS) -I. -c $< -o $@
+
 make_lib:
 	$(MAKE) -C ./ft_printf
-	$(MAKE) -C ./libs/minilibx_opengl
+	$(MAKE) -C ./libs/minilibx-linux
 
 push:
 	@(git add .)
@@ -90,7 +126,7 @@ pull:
 
 clean:
 	@rm -f $(OBJS) $(REMOVE)
-	@rm -fr ./objs
+	@rm -fr ./objs ./objs_bonus so_long_b so-long_b
 	@echo $(LIGHT_GREEN)"BYE BYE"$(RESET)
 
 fclean: clean

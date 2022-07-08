@@ -11,32 +11,11 @@ make[2]: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/ft_
  
 make[1]: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/ft_printf'
  
-make -C ./libs/minilibx_opengl
+make -C ./libs/minilibx-linux
  
-make[1]: Entering directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/libs/minilibx_opengl'
-make[1]: Nothing to be done for 'all'.
-make[1]: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/libs/minilibx_opengl'
+make[1]: Entering directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/libs/minilibx-linux'
+./configure
+make[1]: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/libs/minilibx-linux'
  
-mkdir -p ./objs/
-mkdir -p ./objs/init
-mkdir -p ./objs/kill
-mkdir -p ./objs/move
-mkdir -p ./objs/utils
-mkdir -p ./objs/get_next_line
-gcc -Wall -Wextra -Werror -I. -c src/kill/kill.c -o objs/kill/kill.o
- 
-mkdir -p ./objs/
-mkdir -p ./objs/init
-mkdir -p ./objs/kill
-mkdir -p ./objs/move
-mkdir -p ./objs/utils
-mkdir -p ./objs/get_next_line
-gcc -Wall -Wextra -Werror -I. -c src/kill/destroy_imgs.c -o objs/kill/destroy_imgs.o
- 
-echo [35m"COMPILE MOI CE SO_LONG LA...""\033[0m"
-cp libs/minilibx-linux/libmlx.a so-long
-gcc so-long  ./objs/so_long.o  ./objs/get_next_line/get_next_line_bonus.o  ./objs/get_next_line/get_next_line_utils_bonus.o  ./objs/utils/start.o  ./objs/utils/utils.o  ./objs/init/print_textures.o  ./objs/init/init_textures_p1.o  ./objs/init/init_enemy.o  ./objs/init/init_textures_enemy.o  ./objs/init/init_p1_anim.o  ./objs/init/init_enemy_anim.o  ./objs/move/key_pressed.o  ./objs/move/move_p1.o  ./objs/move/move_p1_anim.o  ./objs/move/move_enemy_anim.o  ./objs/kill/kill.o  ./objs/kill/destroy_imgs.o  libs/minilibx-linux/libmlx.a ft_printf/libftprintf.a -Wall -Wextra -Werror -lbsd -lXext -lX11 -o so_long
-echo [32m"MALADE CA A COMPILER :)""\033[0m"
-./so_long map/map_01.ber
 make: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/so_long'
  

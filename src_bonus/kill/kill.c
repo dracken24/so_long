@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 23:19:56 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 19:36:40 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 18:59:20 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,16 @@ int	kill_game(t_game *game, char *str)
 	exit(0);
 }
 
+void	kill_p1(t_game *game)
+{
+	find_player(game);
+	if (!ft_strchr(game->map_0[game->enemy_pos.y], 'Z'))
+		kill_game(game, "YOU ARE DEAD !!!\n");
+	game->ct.ii = 0;
+	while (!ft_strchr(game->map_0[game->p1_y], 'P'))
+		kill_game(game, "YOU ARE DEAD !!!\n");
+}
+
 int	quit_x(t_game *game)
 {
 	free_ptr(game->map_0);
@@ -33,14 +43,4 @@ int	quit_x(t_game *game)
 	mlx_destroy_window(game->mlx, game->window);
 	perror("Merci d'avoir joué !!!\n");
 	exit(0);
-}
-
-void	destroy_imgs(t_game *game)
-{
-	mlx_destroy_image(game->mlx, game->img.img_pt.img_floor);
-	mlx_destroy_image(game->mlx, game->img.img_pt.img_wall);
-	mlx_destroy_image(game->mlx, game->img.img_pt.img_exit);
-	mlx_destroy_image(game->mlx, game->img.img_pt.img_block);
-	mlx_destroy_image(game->mlx, game->img.img_pt.img_take);
-	mlx_destroy_image(game->mlx, game->img.p1.idle.idle_do);
 }

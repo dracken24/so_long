@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 11:24:29 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 19:03:33 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/07 20:16:22 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ typedef enum s_letters {
 
 typedef struct s_take {
 	int			hammer;
+	int			nbr_hammer;
 }	t_take;
 
 typedef struct s_ct_dir {

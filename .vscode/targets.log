@@ -1,15 +1,18 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make -C ./ft_printf
+ 
 # make[1]: Entering directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/ft_printf'
 make -C ./libft
+ 
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Thu Jul  7 18:53:59 2022
+# Make data base, printed on Thu Jul  7 20:58:17 2022
 
 # Variables
 
@@ -125,6 +128,7 @@ ZSH = /home/dracken24/.oh-my-zsh
 VSCODE_PID = 7212
 # environment
 XDG_SESSION_TYPE = x11
+ 
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
@@ -279,6 +283,7 @@ GSETTINGS_SCHEMA_DIR = /snap/code/100/usr/share/glib-2.0/schemas
 .RECIPEPREFIX := 
 # automatic
 <F = $(notdir $<)
+ 
 # makefile (from 'Makefile', line 24)
 LST = ./lst/
 # environment
@@ -286,7 +291,6 @@ SNAP_VERSION = 92d25e35
 # default
 SUFFIXES := 
 # environment
- 
 VSCODE_CLI = 1
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
@@ -328,101 +332,102 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 # Not a target:
 lst/ft_lstiter.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.685067811
+#  Last modified 2022-07-07 20:58:04.82686538
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mem_alloc/free_ptr.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.653068055
+#  Last modified 2022-07-07 20:58:04.798865571
 #  File has been updated.
 #  Successfully updated.
 
 libft.a: math/ft_ultimate_range.o math/ft_putnbr.o math/ft_range.o math/ft_swap.o math/ft_rev_int_tab.o math/ft_nbrlen.o math/ft_putnbr_fd.o math/ft_p_or_imp.o mem_alloc/ft_bzero.o mem_alloc/ft_calloc.o mem_alloc/free_ptr.o lst/ft_lstmap.o lst/ft_lstiter.o lst/ft_lstclear.o lst/ft_lstdelone.o lst/ft_lstadd_back.o lst/ft_lstlast.o lst/ft_lstsize.o lst/ft_lstadd_front.o lst/ft_lstnew.o str/ft_strlen.o str/ft_strlcpy.o str/ft_strlcat.o str/ft_strrchr.o str/ft_strncmp.o str/ft_strnstr.o str/ft_strtrim.o str/ft_strmapi.o str/ft_striteri.o str/ft_strdup.o str/ft_substr.o str/ft_strjoin.o str/ft_strcat.o str/ft_putchar_fd.o str/ft_putstr_fd.o str/ft_toupper.o str/ft_tolower.o str/ft_strmapi.o str/ft_striteri.o str/ft_putendl_fd.o str/ft_strchr.o str/ft_split.o mem_move/ft_memset.o mem_move/ft_memmove.o mem_move/ft_memcmp.o mem_move/ft_memcpy.o is/ft_isalpha.o is/ft_isdigit.o is/ft_isalnum.o is/ft_isascii.o is/ft_isprint.o atoitoa/ft_atoi.o atoitoa/ft_itoa.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-07 18:53:54.249063511
+#  Last modified 2022-07-07 20:58:05.434861217
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 59):
 	@echo $(LILAS)"LA LIBFT SE COMPILE COMME UNE GRANDE..."$(RESET)
 	ar -rcs $(NAME) $(OBJ)
 	@echo $(LIGHT_GREEN)"LIBFT READY FOR NEXT !!!"$(RESET)
+ 
 
 # Not a target:
 str/ft_putchar_fd.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.993065462
+#  Last modified 2022-07-07 20:58:05.150863161
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 lst/ft_lstadd_front.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.76906717
+#  Last modified 2022-07-07 20:58:04.914864777
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 str/ft_strrchr.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.845066591
+#  Last modified 2022-07-07 20:58:04.990864257
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 lst/ft_lstadd_back.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.729067476
+#  Last modified 2022-07-07 20:58:04.874865051
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 lst/ft_lstdelone.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.713067598
+#  Last modified 2022-07-07 20:58:04.85886516
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 math/ft_putnbr_fd.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.593068513
+#  Last modified 2022-07-07 20:58:04.738865982
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 math/ft_rev_int_tab.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.565068727
+#  Last modified 2022-07-07 20:58:04.710866174
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 str/ft_strtrim.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.889066256
+#  Last modified 2022-07-07 20:58:05.042863901
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 math/ft_putnbr.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.521069062
+#  Last modified 2022-07-07 20:58:04.666866475
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mem_alloc/ft_calloc.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.641068147
+#  Last modified 2022-07-07 20:58:04.782865681
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mem_alloc/ft_bzero.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.625068268
+#  Last modified 2022-07-07 20:58:04.770865763
 #  File has been updated.
 #  Successfully updated.
 
@@ -436,42 +441,43 @@ Makefile:
 # Not a target:
 str/ft_substr.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.949065798
+#  Last modified 2022-07-07 20:58:05.106863462
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 str/ft_strnstr.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.877066347
+#  Last modified 2022-07-07 20:58:05.026864011
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mem_move/ft_memcmp.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.129064426
+#  Last modified 2022-07-07 20:58:05.282862257
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 lst/ft_lstmap.o:
+ 
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.669067934
+#  Last modified 2022-07-07 20:58:04.814865462
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 str/ft_strjoin.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.965065676
+#  Last modified 2022-07-07 20:58:05.122863353
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 atoitoa/ft_itoa.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.245063541
+#  Last modified 2022-07-07 20:58:05.426861272
 #  File has been updated.
 #  Successfully updated.
 
@@ -486,28 +492,28 @@ clean:
 # Not a target:
 str/ft_split.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.085064761
+#  Last modified 2022-07-07 20:58:05.238862558
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 str/ft_putendl_fd.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.053065005
+#  Last modified 2022-07-07 20:58:05.206862778
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 str/ft_strlcat.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.833066683
+#  Last modified 2022-07-07 20:58:04.974864366
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 str/ft_strmapi.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.905066134
+#  Last modified 2022-07-07 20:58:05.062863764
 #  File has been updated.
 #  Successfully updated.
 
@@ -520,49 +526,49 @@ re: fclean all
 # Not a target:
 mem_move/ft_memcpy.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.145064303
+#  Last modified 2022-07-07 20:58:05.298862148
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 str/ft_strdup.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.93306592
+#  Last modified 2022-07-07 20:58:05.090863572
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 is/ft_isprint.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.213063785
+#  Last modified 2022-07-07 20:58:05.3788616
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 is/ft_isalnum.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.185063998
+#  Last modified 2022-07-07 20:58:05.346861819
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 is/ft_isalpha.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.157064212
+#  Last modified 2022-07-07 20:58:05.314862039
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 is/ft_isdigit.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.17306409
+#  Last modified 2022-07-07 20:58:05.330861929
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mem_move/ft_memset.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.101064639
+#  Last modified 2022-07-07 20:58:05.254862449
 #  File has been updated.
 #  Successfully updated.
 
@@ -575,8 +581,7 @@ mem_move/ft_memset.o:
 # Not a target:
 atoitoa/ft_atoi.o:
 #  Implicit rule search has been done.
- 
-#  Last modified 2022-07-07 18:53:54.229063663
+#  Last modified 2022-07-07 20:58:05.402861436
 #  File has been updated.
 #  Successfully updated.
 
@@ -598,28 +603,28 @@ fclean: clean
 # Not a target:
 str/ft_strcat.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.981065554
+#  Last modified 2022-07-07 20:58:05.134863271
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 math/ft_swap.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.549068849
+#  Last modified 2022-07-07 20:58:04.694866284
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 str/ft_strchr.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.069064883
+#  Last modified 2022-07-07 20:58:05.222862669
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 math/ft_ultimate_range.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.505069184
+#  Last modified 2022-07-07 20:58:04.650866585
 #  File has been updated.
 #  Successfully updated.
 
@@ -635,105 +640,105 @@ gitp:
 # Not a target:
 str/ft_tolower.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.037065127
+#  Last modified 2022-07-07 20:58:05.19486286
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mem_move/ft_memmove.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.113064548
+#  Last modified 2022-07-07 20:58:05.27086234
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 lst/ft_lstlast.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.741067385
+#  Last modified 2022-07-07 20:58:04.886864969
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 str/ft_strncmp.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.861066469
+#  Last modified 2022-07-07 20:58:05.006864147
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 str/ft_strlcpy.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.817066805
+#  Last modified 2022-07-07 20:58:04.962864449
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 lst/ft_lstnew.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.785067049
+#  Last modified 2022-07-07 20:58:04.930864668
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 str/ft_striteri.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.921066011
+#  Last modified 2022-07-07 20:58:05.074863682
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 lst/ft_lstclear.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.697067719
+#  Last modified 2022-07-07 20:58:04.84286527
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 lst/ft_lstsize.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.753067293
+#  Last modified 2022-07-07 20:58:04.902864859
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 str/ft_toupper.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.021065249
+#  Last modified 2022-07-07 20:58:05.17886297
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 str/ft_strlen.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.797066957
+#  Last modified 2022-07-07 20:58:04.946864558
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 math/ft_p_or_imp.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.609068391
+#  Last modified 2022-07-07 20:58:04.754865873
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 math/ft_range.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.53706894
+#  Last modified 2022-07-07 20:58:04.682866365
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 math/ft_nbrlen.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:53.577068635
+#  Last modified 2022-07-07 20:58:04.726866064
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 str/ft_putstr_fd.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.009065341
+#  Last modified 2022-07-07 20:58:05.162863079
 #  File has been updated.
 #  Successfully updated.
 
@@ -745,7 +750,7 @@ str/ft_putstr_fd.o:
 # Not a target:
 is/ft_isascii.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.201063877
+#  Last modified 2022-07-07 20:58:05.36286171
 #  File has been updated.
 #  Successfully updated.
 
@@ -757,15 +762,15 @@ is/ft_isascii.o:
 
 # No general ('VPATH' variable) search path.
 
+ 
 # strcache buffers: 1 (0) / strings = 75 / storage = 1093 B / avg = 14 B
 # current buf: size = 8162 B / used = 1093 B / count = 75 / avg = 14 B
 
 # strcache performance: lookups = 96 / hit rate = 21%
 # hash-table stats:
 # Load=75/8192=1%, Rehash=0, Collisions=1/96=1%
-# Finished Make data base on Thu Jul  7 18:53:59 2022
+# Finished Make data base on Thu Jul  7 20:58:17 2022
 
- 
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -773,7 +778,7 @@ is/ft_isascii.o:
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul  7 18:53:59 2022
+# Make data base, printed on Thu Jul  7 20:58:17 2022
 
 # Variables
 
@@ -860,6 +865,7 @@ SRCS = ft_hexa.c ft_printf.c ft_put.c
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
+ 
 MFLAGS = -pqrRw
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
@@ -1049,6 +1055,7 @@ ELECTRON_NO_ATTACH_CONSOLE = 1
 SNAP_COMMON = /var/snap/code/common
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+ 
 # makefile (from 'Makefile', line 26)
 CC = gcc
 # environment
@@ -1067,7 +1074,6 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 # Pattern-specific Variable Values
 
 # No pattern-specific variable values.
- 
 
 # Directories
 
@@ -1084,14 +1090,14 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 # Not a target:
 ft_printf.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.285063236
+#  Last modified 2022-07-07 20:58:05.474860943
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_hexa.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.269063358
+#  Last modified 2022-07-07 20:58:05.45486108
 #  File has been updated.
 #  Successfully updated.
 
@@ -1105,7 +1111,7 @@ Makefile:
 # Not a target:
 ft_put.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:54.301063114
+#  Last modified 2022-07-07 20:58:05.490860834
 #  File has been updated.
 #  Successfully updated.
 
@@ -1137,7 +1143,7 @@ push:
 
 libftprintf.a: ft_hexa.o ft_printf.o ft_put.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-07 18:53:54.305063083
+#  Last modified 2022-07-07 20:58:05.498860779
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 38):
@@ -1195,6 +1201,7 @@ make_lib:
 # | := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=2/13=15%
+ 
 #  recipe to execute (from 'Makefile', line 44):
 	$(MAKE) -C ./libft
 
@@ -1223,11 +1230,11 @@ make_lib:
 # strcache performance: lookups = 51 / hit rate = 52%
 # hash-table stats:
 # Load=24/8192=0%, Rehash=0, Collisions=0/51=0%
-# Finished Make data base on Thu Jul  7 18:53:59 2022
+# Finished Make data base on Thu Jul  7 20:58:17 2022
 
 # make[1]: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/ft_printf'
  
-make -C ./libs/minilibx_opengl
+make -C ./libs/minilibx-linux
  
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
@@ -1235,19 +1242,16 @@ make -C ./libs/minilibx_opengl
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Thu Jul  7 18:53:59 2022
+# Make data base, printed on Thu Jul  7 20:58:17 2022
 
 # Variables
 
-# makefile (from 'Makefile', line 8)
-OBJ = $(OBJ1:.m=.o)
 # environment
 GDK_BACKEND = x11
 # environment
 LC_ALL = C
-# makefile (from 'Makefile', line 6)
-SRC = mlx_shaders.c mlx_new_window.m mlx_init_loop.m mlx_new_image.m mlx_xpm.c mlx_int_str_to_wordtab.c mlx_png.c mlx_mouse.m
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
@@ -1308,10 +1312,8 @@ HOMEBREW_REPOSITORY = /home/linuxbrew/.linuxbrew/Homebrew
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # makefile
 MAKEFLAGS = pqrRw
-# makefile (from 'Makefile', line 7)
-OBJ1 = $(SRC:.c=.o)
 # makefile
-CURDIR := /home/dracken24/Desktop/prog/42_en_cours/so_long/libs/minilibx_opengl
+CURDIR := /home/dracken24/Desktop/prog/42_en_cours/so_long/libs/minilibx-linux
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
@@ -1346,6 +1348,7 @@ XDG_SESSION_TYPE = x11
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
 SESSION_MANAGER = local/Dracken24:@/tmp/.ICE-unix/2732,unix/Dracken24:/tmp/.ICE-unix/2732
+ 
 # automatic
 *F = $(notdir $*)
 # environment
@@ -1424,8 +1427,6 @@ SNAP_ARCH = amd64
 .DEFAULT_GOAL := all
 # environment
 SYSTEMD_EXEC_PID = 2755
-# makefile (from 'Makefile', line 4)
-NOM = libmlx.a
 # environment
 DISPLAY = :1
 # environment
@@ -1454,8 +1455,6 @@ PAGER = less
 _ = /snap/code/100/usr/share/code/code
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
-# makefile (from 'Makefile', line 12)
-CFLAGS = -O2 -DSTRINGPUTX11
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
@@ -1490,6 +1489,7 @@ SUFFIXES :=
 VSCODE_CLI = 1
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
+ 
 # environment
 SNAP_COMMON = /var/snap/code/common
 # default
@@ -1503,7 +1503,7 @@ GDMSESSION = ubuntu
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=131/1024=13%, Rehash=0, Collisions=15/173=9%
+# Load=126/1024=12%, Rehash=0, Collisions=11/161=7%
 
 # Pattern-specific Variable Values
 
@@ -1511,9 +1511,9 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 66308, inode 2572459): 29 files, no impossibilities.
+# . (device 66308, inode 2572477): 53 files, no impossibilities.
 
-# 29 files, no impossibilities in 1 directories.
+# 53 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -1521,46 +1521,37 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Files
 
-# Not a target:
-mlx_xpm.o:
-#  Implicit rule search has been done.
- 
-#  Last modified 2022-07-06 17:24:37.42604605
+do_configure:
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-mlx_new_window.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-06 17:24:37.42604605
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-mlx_mouse.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-06 17:24:37.42604605
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-mlx_init_loop.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-06 17:24:37.42604605
-#  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := do_configure
+# automatic
+# * := 
+# automatic
+# < := 
+# automatic
+# + := 
+# automatic
+# % := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/11=9%
+#  recipe to execute (from 'Makefile', line 17):
+	./configure
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-06 17:24:37.42604605
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-mlx_new_image.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-06 17:24:37.42604605
+#  Last modified 2022-02-28 06:32:12
 #  File has been updated.
 #  Successfully updated.
 
@@ -1568,9 +1559,8 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 21):
-	rm -f $(NOM) $(OBJ) *~
-	rm -f mlx_app
+#  recipe to execute (from 'Makefile', line 20):
+	./configure clean
 
 re: clean all
 #  Implicit rule search has not been done.
@@ -1578,62 +1568,41 @@ re: clean all
 #  File has not been updated.
 
 # Not a target:
-mlx_int_str_to_wordtab.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-06 17:24:37.42604605
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-mlx_png.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-06 17:24:37.42604605
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
 .DEFAULT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-all: libmlx.a
+all: do_configure
 #  Implicit rule search has been done.
+ 
 #  File does not exist.
 #  File has been updated.
-#  Successfully updated.
-
-libmlx.a: mlx_shaders.o mlx_new_window.o mlx_init_loop.o mlx_new_image.o mlx_xpm.o mlx_int_str_to_wordtab.o mlx_png.o mlx_mouse.o
-#  Implicit rule search has not been done.
-#  Last modified 2022-07-07 18:53:54.313063023
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 17):
-	ar -r $(NOM) $(OBJ)
-	ranlib $(NOM)
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/3=0%
 
 # Not a target:
-mlx_shaders.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-06 17:24:37.42604605
-#  File has been updated.
-#  Successfully updated.
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # files hash-table stats:
-# Load=15/1024=1%, Rehash=0, Collisions=0/38=0%
+# Load=7/1024=1%, Rehash=0, Collisions=0/23=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 37 / storage = 443 B / avg = 11 B
-# current buf: size = 8162 B / used = 443 B / count = 37 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 62 / storage = 863 B / avg = 13 B
+# current buf: size = 8162 B / used = 863 B / count = 62 / avg = 13 B
 
-# strcache performance: lookups = 56 / hit rate = 33%
+# strcache performance: lookups = 73 / hit rate = 15%
 # hash-table stats:
-# Load=37/8192=0%, Rehash=0, Collisions=0/56=0%
-# Finished Make data base on Thu Jul  7 18:53:59 2022
+# Load=62/8192=1%, Rehash=0, Collisions=0/73=0%
+# Finished Make data base on Thu Jul  7 20:58:17 2022
 
  
 # GNU Make 4.3
@@ -1641,10 +1610,10 @@ mlx_shaders.o:
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
- 
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Thu Jul  7 18:53:59 2022
+# Make data base, printed on Thu Jul  7 20:58:17 2022
 
 # Variables
 
@@ -1671,16 +1640,18 @@ MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
 # environment
 QT_X11_NO_MITSHM = 1
 # makefile (from 'Makefile', line 25)
+ 
 PATH_KILL = ./src/kill/
 # environment
 VSCODE_CWD = /home/dracken24
-# makefile (from 'Makefile', line 46)
- 
+# makefile (from 'Makefile', line 63)
 LIBX_A_MAC = libs/minilibx_opengl/libmlx.a
 # environment
 WINDOWPATH = 2
 # makefile (from 'Makefile', line 27)
 PATH_UTILS = ./src/utils/
+# makefile (from 'Makefile', line 67)
+NAME_B = so-long_b
 # default
 MAKE_COMMAND := make
 # environment
@@ -1707,6 +1678,8 @@ XDG_DATA_DIRS = /usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/
 OLDPWD = /home/dracken24
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
+# makefile (from 'Makefile', line 32)
+PATH_INIT_B = ./src_bonus/init/
 # automatic
 %F = $(notdir $%)
 # environment
@@ -1725,6 +1698,7 @@ HOMEBREW_REPOSITORY = /home/linuxbrew/.linuxbrew/Homebrew
 CYAN = $(shell tput -Txterm setaf 4)
 # makefile
 MAKEFLAGS = pqrR
+ 
 # makefile (from 'Makefile', line 23)
 PATH_SRC = ./src/
 # makefile
@@ -1741,6 +1715,8 @@ SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 .SHELLFLAGS := -c
 # makefile (from 'Makefile', line 14)
 LIGHT_GREEN = $(shell tput -Txterm setaf 2)
+# makefile (from 'Makefile', line 30)
+PATH_OBJS_B = ./objs_bonus/
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # automatic
@@ -1761,17 +1737,20 @@ VSCODE_PID = 7212
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
- 
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
-# makefile (from 'Makefile', line 42)
+# makefile (from 'Makefile', line 59)
 FLAGS = -Wall -Wextra -Werror
 # environment
 SESSION_MANAGER = local/Dracken24:@/tmp/.ICE-unix/2732,unix/Dracken24:/tmp/.ICE-unix/2732
 # automatic
 *F = $(notdir $*)
+# makefile (from 'Makefile', line 33)
+PATH_KILL_B = ./src_bonus/kill/
 # environment
 MANPATH = /home/linuxbrew/.linuxbrew/share/man:
+# makefile (from 'Makefile', line 35)
+PATH_UTILS_B = ./src_bonus/utils/
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
@@ -1784,7 +1763,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupp
 PATH_INIT = ./src/init/
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
-# makefile (from 'Makefile', line 39)
+# makefile (from 'Makefile', line 54)
 OBJS = $(patsubst $(PATH_SRC)%.c, $(PATH_OBJS)%.o, $(FILES)) 
 # environment
 GNOME_DESKTOP_SESSION_ID = this-is-deprecated
@@ -1795,6 +1774,7 @@ SHELL = /bin/sh
 # default
 MAKECMDGOALS := all
 # environment
+ 
 XMODIFIERS = @im=ibus
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
@@ -1828,16 +1808,15 @@ SNAP_REAL_HOME = /home/dracken24
 LIGHT_RED = $(shell tput -Txterm setaf 1)
 # environment
 USERNAME = dracken24
-# makefile (from 'Makefile', line 30)
- 
-FILES = $(PATH_SRC)so_long.c $(PATH_GNL)get_next_line_bonus.c $(PATH_GNL)get_next_line_utils_bonus.c $(PATH_UTILS)start.c $(PATH_UTILS)utils.c $(PATH_INIT)print_textures.c $(PATH_INIT)init_textures_p1.c  $(PATH_INIT)init_enemy.c $(PATH_INIT)init_textures_enemy.c $(PATH_INIT)init_p1_anim.c $(PATH_INIT)init_enemy_anim.c $(PATH_MOVE)key_pressed.c $(PATH_MOVE)move_p1.c $(PATH_MOVE)move_p1_anim.c $(PATH_MOVE)move_enemy_anim.c $(PATH_KILL)kill.c $(PATH_KILL)destroy_imgs.c 
+# makefile (from 'Makefile', line 38)
+FILES = $(PATH_SRC)so_long.c $(PATH_GNL)get_next_line_bonus.c $(PATH_GNL)get_next_line_utils_bonus.c $(PATH_UTILS)start.c $(PATH_UTILS)utils.c $(PATH_INIT)print_textures.c $(PATH_INIT)init_textures_p1.c $(PATH_MOVE)key_pressed.c $(PATH_MOVE)move_p1.c $(PATH_KILL)kill.c 
 # automatic
 ?F = $(notdir $?)
-# makefile (from 'Makefile', line 44)
+# makefile (from 'Makefile', line 61)
 MLXFLAG_LINUX = -lbsd -lXext -lX11
-# makefile (from 'Makefile', line 49)
+# makefile (from 'Makefile', line 66)
 NAME = so-long
-# makefile (from 'Makefile', line 51)
+# makefile (from 'Makefile', line 69)
 PRINTF = make_lib
 # environment
 XDG_CURRENT_DESKTOP = Unity
@@ -1853,7 +1832,7 @@ DESKTOP_SESSION = ubuntu
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # 'override' directive
 GNUMAKEFLAGS := 
-# makefile (from 'Makefile', line 43)
+# makefile (from 'Makefile', line 60)
 MLXFLAG_MAC = -framework OpenGl -framework Cocoa
 # environment
 LOGNAME = dracken24
@@ -1873,6 +1852,9 @@ DISPLAY = :1
 USER = dracken24
 # environment
 GTK_MODULES = gail:atk-bridge
+# makefile (from 'Makefile', line 31)
+ 
+PATH_SRC_B = ./src_bonus/
 # environment
 DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
 # default
@@ -1895,6 +1877,8 @@ GIO_LAUNCHED_DESKTOP_FILE_PID = 7163
 PAGER = less
 # makefile (from 'Makefile', line 17)
 LILAS = $(shell tput -Txterm setaf 5)
+# makefile (from 'Makefile', line 45)
+FILES_BONUS = $(PATH_SRC_B)so_long.c $(PATH_GNL_B)get_next_line_bonus.c $(PATH_GNL_B)get_next_line_utils_bonus.c $(PATH_UTILS_B)start.c $(PATH_UTILS_B)utils.c $(PATH_INIT_B)print_textures.c $(PATH_INIT_B)init_textures_p1.c  $(PATH_INIT_B)init_enemy.c $(PATH_INIT_B)init_textures_enemy.c $(PATH_INIT_B)init_p1_anim.c $(PATH_INIT_B)init_enemy_anim.c $(PATH_MOVE_B)key_pressed.c $(PATH_MOVE_B)move_p1.c $(PATH_MOVE_B)move_p1_anim.c $(PATH_MOVE_B)move_enemy_anim.c $(PATH_KILL_B)kill.c $(PATH_KILL_B)destroy_imgs.c 
 # environment
 _ = /snap/code/100/usr/share/code/code
 # makefile (from 'Makefile', line 20)
@@ -1903,10 +1887,12 @@ RESET = "\033[0m"
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
-# makefile (from 'Makefile', line 47)
+# makefile (from 'Makefile', line 64)
 LIBX_A_LINUX = libs/minilibx-linux/libmlx.a
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/dracken24/snap/code/common/.cache/gdk-pixbuf-loaders.cache
+# makefile (from 'Makefile', line 36)
+PATH_GNL_B = ./src_bonus/get_next_line/
 # environment
 JOURNAL_STREAM = 8:39107
 # environment
@@ -1915,13 +1901,13 @@ XDG_SESSION_CLASS = user
 LIGHT_BROWN = $(shell tput -Txterm setaf 3)
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
-# makefile (from 'Makefile', line 52)
+# makefile (from 'Makefile', line 70)
 PRINTF_A = ft_printf/libftprintf.a
 # environment
 HOME = /home/dracken24
 # environment
 QT_IM_MODULE = ibus
-# makefile (from 'Makefile', line 54)
+# makefile (from 'Makefile', line 72)
 REMOVE = ./ft_printf/*.o ./ft_printf/libft/atoitoa/*.o ./ft_printf/libft/is/*.o ./ft_printf/libft/lst/*.o ./ft_printf/libft/math/*.o ./ft_printf/libft/mem_alloc/*.o ./ft_printf/libft/mem_move/*.o ./ft_printf/libft/str/*.o ./ft_printf/*.a ./ft_printf/libft/*.a ./src/*.o so_long gcc solong ./libs/mlx_linux/*.a ./libs/minilibx_opengl/libmlx.a 
 # environment
 ELECTRON_RUN_AS_NODE = 1
@@ -1937,6 +1923,8 @@ GSETTINGS_SCHEMA_DIR = /snap/code/100/usr/share/glib-2.0/schemas
 <F = $(notdir $<)
 # environment
 SNAP_VERSION = 92d25e35
+# makefile (from 'Makefile', line 56)
+OBJS_B = $(patsubst $(PATH_SRC_B)%.c, $(PATH_OBJS_B)%.o, $(FILES_BONUS)) 
 # default
 SUFFIXES := 
 # environment
@@ -1947,12 +1935,15 @@ ELECTRON_NO_ATTACH_CONSOLE = 1
 SNAP_COMMON = /var/snap/code/common
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
-# makefile (from 'Makefile', line 41)
+# makefile (from 'Makefile', line 58)
 CC = gcc
+ 
 # environment
 SNAP_USER_DATA = /home/dracken24/snap/code/100
 # environment
 XDG_MENU_PREFIX = gnome-
+# makefile (from 'Makefile', line 34)
+PATH_MOVE_B = ./src_bonus/move/
 # makefile (from 'Makefile', line 19)
 WHITE = $(shell tput -Txterm setaf 7)
 # environment
@@ -1960,7 +1951,7 @@ GDMSESSION = ubuntu
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=154/1024=15%, Rehash=0, Collisions=16/231=7%
+# Load=164/1024=16%, Rehash=0, Collisions=18/248=7%
 
 # Pattern-specific Variable Values
 
@@ -1968,20 +1959,16 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# src (device 66308, inode 2572465): 3 files, no impossibilities so far.
-# src/get_next_line (device 66308, inode 2572466): 4 files, no impossibilities so far.
-# . (device 66308, inode 2457837): 16 files, no impossibilities.
-# src/utils (device 66308, inode 2572470): 4 files, no impossibilities so far.
-# src/kill (device 66308, inode 2572468): 1 files, no impossibilities so far.
-# src/move (device 66308, inode 2572469): 6 files, no impossibilities so far.
-# src/init (device 66308, inode 2572467): 8 files, no impossibilities so far.
+# src_bonus (device 66308, inode 2588841): No files, no impossibilities so far.
+# src (device 66308, inode 2572465): No files, no impossibilities so far.
+# . (device 66308, inode 2457837): 17 files, no impossibilities.
 
-# 42 files, no impossibilities in 7 directories.
+# 17 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
 objs/%.o: src/%.c
-#  recipe to execute (from 'Makefile', line 71):
+#  recipe to execute (from 'Makefile', line 89):
 	@mkdir -p $(PATH_OBJS)
 	@mkdir -p $(PATH_OBJS)init
 	@mkdir -p $(PATH_OBJS)kill
@@ -1990,261 +1977,163 @@ objs/%.o: src/%.c
 	@mkdir -p $(PATH_OBJS)get_next_line
 	$(CC) $(FLAGS) -I. -c $< -o $@
 
-# 1 implicit rules, 0 (0.0%) terminal.
+objs_bonus/%.o: src_bonus/%.c
+#  recipe to execute (from 'Makefile', line 107):
+	@mkdir -p $(PATH_OBJS_B)
+	@mkdir -p $(PATH_OBJS_B)init
+	@mkdir -p $(PATH_OBJS_B)kill
+	@mkdir -p $(PATH_OBJS_B)move
+	@mkdir -p $(PATH_OBJS_B)utils
+	@mkdir -p $(PATH_OBJS_B)get_next_line
+	$(CC) $(FLAGS) -I. -c $< -o $@
+
+# 2 implicit rules, 0 (0.0%) terminal.
 # Files
 
-objs/utils/utils.o: src/utils/utils.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'utils/utils'
-#  Last modified 2022-07-07 18:53:54.429062138
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 71):
-	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)init
-	@mkdir -p $(PATH_OBJS)kill
-	@mkdir -p $(PATH_OBJS)move
-	@mkdir -p $(PATH_OBJS)utils
-	@mkdir -p $(PATH_OBJS)get_next_line
-	$(CC) $(FLAGS) -I. -c $< -o $@
+# Not a target:
+objs_bonus/utils/utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-objs/so_long.o: src/so_long.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'so_long'
-#  Last modified 2022-07-07 18:53:54.341062809
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 71):
-	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)init
-	@mkdir -p $(PATH_OBJS)kill
-	@mkdir -p $(PATH_OBJS)move
-	@mkdir -p $(PATH_OBJS)utils
-	@mkdir -p $(PATH_OBJS)get_next_line
-	$(CC) $(FLAGS) -I. -c $< -o $@
+# Not a target:
+objs_bonus/so_long.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/utils/utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs/so_long.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ 
+objs_bonus/move/move_enemy_anim.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 pull:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 89):
+#  recipe to execute (from 'Makefile', line 125):
 	@(git pull)
 
 # Not a target:
-src/kill/kill.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:15.909356901
-#  File has been updated.
-#  Successfully updated.
+objs_bonus/kill/kill.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
-src/so_long.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:33:24.14126248
-#  File has been updated.
-#  Successfully updated.
+objs_bonus/kill/destroy_imgs.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+b: so-long_b
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
-src/init/init_p1_anim.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:33:24.14126248
-#  File has been updated.
-#  Successfully updated.
-
-objs/move/move_enemy_anim.o: src/move/move_enemy_anim.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'move/move_enemy_anim'
-#  Last modified 2022-07-07 18:53:54.693060125
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 71):
-	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)init
-	@mkdir -p $(PATH_OBJS)kill
-	@mkdir -p $(PATH_OBJS)move
-	@mkdir -p $(PATH_OBJS)utils
-	@mkdir -p $(PATH_OBJS)get_next_line
-	$(CC) $(FLAGS) -I. -c $< -o $@
+objs_bonus/move/move_p1_anim.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:53:51.213086667
-#  File has been updated.
-#  Successfully updated.
-
-objs/init/init_enemy.o: src/init/init_enemy.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'init/init_enemy'
-#  Last modified 2022-07-07 18:53:54.509061528
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 71):
-	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)init
-	@mkdir -p $(PATH_OBJS)kill
-	@mkdir -p $(PATH_OBJS)move
-	@mkdir -p $(PATH_OBJS)utils
-	@mkdir -p $(PATH_OBJS)get_next_line
-	$(CC) $(FLAGS) -I. -c $< -o $@
-
-# Not a target:
-src/move/key_pressed.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:33:24.14126248
+#  Last modified 2022-07-07 20:57:30.167102636
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-src/init/init_enemy_anim.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:33:24.14126248
-#  File has been updated.
-#  Successfully updated.
+objs_bonus/init/init_p1_anim.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 .Phony: all make_lib obj push pull clean fclean re
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-objs/kill/kill.o: src/kill/kill.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'kill/kill'
-#  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := objs/kill/kill.o
-# automatic
-# * := kill/kill
-# automatic
-# < := src/kill/kill.c
-# automatic
-# + := src/kill/kill.c
-# automatic
-# % := 
-# automatic
-# ^ := src/kill/kill.c
- 
-# automatic
-# ? := src/kill/kill.c
-# automatic
-# | := 
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=2/21=10%
-#  recipe to execute (from 'Makefile', line 71):
-	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)init
-	@mkdir -p $(PATH_OBJS)kill
-	@mkdir -p $(PATH_OBJS)move
-	@mkdir -p $(PATH_OBJS)utils
-	@mkdir -p $(PATH_OBJS)get_next_line
-	$(CC) $(FLAGS) -I. -c $< -o $@
+# Not a target:
+objs/kill/kill.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 92):
+#  recipe to execute (from 'Makefile', line 128):
 	@rm -f $(OBJS) $(REMOVE)
-	@rm -fr ./objs
+	@rm -fr ./objs ./objs_bonus so_long_b so-long_b
 	@echo $(LIGHT_GREEN)"BYE BYE"$(RESET)
 
 # Not a target:
-src/utils/utils.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:33:24.14126248
-#  File has been updated.
-#  Successfully updated.
+objs/init/print_textures.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
-src/init/print_textures.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:33:24.14126248
-#  File has been updated.
-#  Successfully updated.
-
-objs/init/print_textures.o: src/init/print_textures.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'init/print_textures'
-#  Last modified 2022-07-07 18:53:54.461061894
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 71):
-	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)init
-	@mkdir -p $(PATH_OBJS)kill
-	@mkdir -p $(PATH_OBJS)move
-	@mkdir -p $(PATH_OBJS)utils
-	@mkdir -p $(PATH_OBJS)get_next_line
-	$(CC) $(FLAGS) -I. -c $< -o $@
-
-objs/move/move_p1.o: src/move/move_p1.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'move/move_p1'
-#  Last modified 2022-07-07 18:53:54.641060522
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 71):
-	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)init
-	@mkdir -p $(PATH_OBJS)kill
-	@mkdir -p $(PATH_OBJS)move
-	@mkdir -p $(PATH_OBJS)utils
-	@mkdir -p $(PATH_OBJS)get_next_line
-	$(CC) $(FLAGS) -I. -c $< -o $@
+objs/move/move_p1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
-src/utils/start.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:51:26.266208865
-#  File has been updated.
-#  Successfully updated.
+objs_bonus/init/init_textures_p1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
-src/move/move_enemy_anim.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:33:24.14126248
-#  File has been updated.
-#  Successfully updated.
-
-objs/move/move_p1_anim.o: src/move/move_p1_anim.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'move/move_p1_anim'
-#  Last modified 2022-07-07 18:53:54.665060339
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 71):
-	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)init
-	@mkdir -p $(PATH_OBJS)kill
-	@mkdir -p $(PATH_OBJS)move
-	@mkdir -p $(PATH_OBJS)utils
-	@mkdir -p $(PATH_OBJS)get_next_line
-	$(CC) $(FLAGS) -I. -c $< -o $@
+objs_bonus/init/init_enemy_anim.o:
+#  Implicit rule search has not been done.
+ 
+#  Modification time never checked.
+#  File has not been updated.
 
 re: fclean all
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-objs/get_next_line/get_next_line_bonus.o: src/get_next_line/get_next_line_bonus.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'get_next_line/get_next_line_bonus'
-#  Last modified 2022-07-07 18:53:54.357062687
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 71):
-	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)init
-	@mkdir -p $(PATH_OBJS)kill
-	@mkdir -p $(PATH_OBJS)move
-	@mkdir -p $(PATH_OBJS)utils
-	@mkdir -p $(PATH_OBJS)get_next_line
-	$(CC) $(FLAGS) -I. -c $< -o $@
+# Not a target:
+objs/get_next_line/get_next_line_bonus.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 obj:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs_bonus/utils/start.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs_bonus/init/print_textures.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -2253,11 +2142,16 @@ push:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 84):
+#  recipe to execute (from 'Makefile', line 120):
 	@(git add .)
 	@(git commit -m "nadesjar42")
 	@(git push)
- 
+
+# Not a target:
+objs_bonus/move/move_p1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -2265,131 +2159,63 @@ push:
 #  Modification time never checked.
 #  File has not been updated.
 
-objs/utils/start.o: src/utils/start.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'utils/start'
-#  Last modified 2022-07-07 18:53:54.405062321
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 71):
-	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)init
-	@mkdir -p $(PATH_OBJS)kill
-	@mkdir -p $(PATH_OBJS)move
-	@mkdir -p $(PATH_OBJS)utils
-	@mkdir -p $(PATH_OBJS)get_next_line
-	$(CC) $(FLAGS) -I. -c $< -o $@
+# Not a target:
+objs/utils/start.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objs_bonus/move/key_pressed.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 all: make_lib so-long
 #  Command line target.
 #  Implicit rule search has been done.
 #  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
+#  File has not been updated.
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/21=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/10=0%
 
 fclean: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 97):
+#  recipe to execute (from 'Makefile', line 133):
 	@rm -f $(NAME)
 
-objs/init/init_textures_p1.o: src/init/init_textures_p1.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'init/init_textures_p1'
-#  Last modified 2022-07-07 18:53:54.485061711
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 71):
-	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)init
-	@mkdir -p $(PATH_OBJS)kill
-	@mkdir -p $(PATH_OBJS)move
-	@mkdir -p $(PATH_OBJS)utils
-	@mkdir -p $(PATH_OBJS)get_next_line
-	$(CC) $(FLAGS) -I. -c $< -o $@
+# Not a target:
+objs/init/init_textures_p1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
-src/get_next_line/get_next_line_utils_bonus.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-06 17:24:37.42604605
-#  File has been updated.
-#  Successfully updated.
+objs/move/key_pressed.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
-src/init/init_enemy.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:33:24.14126248
-#  File has been updated.
-#  Successfully updated.
-
-objs/move/key_pressed.o: src/move/key_pressed.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'move/key_pressed'
-#  Last modified 2022-07-07 18:53:54.609060765
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 71):
-	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)init
-	@mkdir -p $(PATH_OBJS)kill
-	@mkdir -p $(PATH_OBJS)move
-	@mkdir -p $(PATH_OBJS)utils
-	@mkdir -p $(PATH_OBJS)get_next_line
-	$(CC) $(FLAGS) -I. -c $< -o $@
+objs_bonus/get_next_line/get_next_line_utils_bonus.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
-src/get_next_line/get_next_line_bonus.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-06 17:24:37.42604605
-#  File has been updated.
-#  Successfully updated.
-
-objs/init/init_p1_anim.o: src/init/init_p1_anim.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'init/init_p1_anim'
-#  Last modified 2022-07-07 18:53:54.561061132
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 71):
-	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)init
-	@mkdir -p $(PATH_OBJS)kill
-	@mkdir -p $(PATH_OBJS)move
-	@mkdir -p $(PATH_OBJS)utils
-	@mkdir -p $(PATH_OBJS)get_next_line
-	$(CC) $(FLAGS) -I. -c $< -o $@
-
-# Not a target:
-src/init/init_textures_p1.c:
-#  Implicit rule search has been done.
- 
-#  Last modified 2022-07-07 18:33:24.14126248
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/init/init_textures_enemy.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-07 18:33:24.14126248
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/move/move_p1.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-06 17:24:37.42604605
-#  File has been updated.
-#  Successfully updated.
+objs_bonus/init/init_enemy.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 make_lib:
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: ''
-#  File does not exist.
+#  Modification time never checked.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
 # automatic
 # @ := make_lib
 # automatic
@@ -2408,60 +2234,32 @@ make_lib:
 # | := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=3/18=17%
-#  recipe to execute (from 'Makefile', line 80):
+#  recipe to execute (from 'Makefile', line 116):
 	$(MAKE) -C ./ft_printf
-	$(MAKE) -C ./libs/minilibx_opengl
-
-objs/init/init_enemy_anim.o: src/init/init_enemy_anim.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'init/init_enemy_anim'
-#  Last modified 2022-07-07 18:53:54.585060949
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 71):
-	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)init
-	@mkdir -p $(PATH_OBJS)kill
-	@mkdir -p $(PATH_OBJS)move
-	@mkdir -p $(PATH_OBJS)utils
-	@mkdir -p $(PATH_OBJS)get_next_line
-	$(CC) $(FLAGS) -I. -c $< -o $@
- 
-
-objs/get_next_line/get_next_line_utils_bonus.o: src/get_next_line/get_next_line_utils_bonus.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'get_next_line/get_next_line_utils_bonus'
-#  Last modified 2022-07-07 18:53:54.377062534
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 71):
-	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)init
-	@mkdir -p $(PATH_OBJS)kill
-	@mkdir -p $(PATH_OBJS)move
-	@mkdir -p $(PATH_OBJS)utils
-	@mkdir -p $(PATH_OBJS)get_next_line
-	$(CC) $(FLAGS) -I. -c $< -o $@
+	$(MAKE) -C ./libs/minilibx-linux
 
 # Not a target:
-objs/kill/destroy_imgs.o:
+objs_bonus/init/init_textures_enemy.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-so-long: objs/so_long.o objs/get_next_line/get_next_line_bonus.o objs/get_next_line/get_next_line_utils_bonus.o objs/utils/start.o objs/utils/utils.o objs/init/print_textures.o objs/init/init_textures_p1.o objs/init/init_enemy.o objs/init/init_textures_enemy.o objs/init/init_p1_anim.o objs/init/init_enemy_anim.o objs/move/key_pressed.o objs/move/move_p1.o objs/move/move_p1_anim.o objs/move/move_enemy_anim.o objs/kill/kill.o objs/kill/destroy_imgs.o
+# Not a target:
+objs/get_next_line/get_next_line_utils_bonus.o:
 #  Implicit rule search has not been done.
-#  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/11=0%
-#  recipe to execute (from 'Makefile', line 64):
+#  Modification time never checked.
+#  File has not been updated.
+
+so-long: objs/so_long.o objs/get_next_line/get_next_line_bonus.o objs/get_next_line/get_next_line_utils_bonus.o objs/utils/start.o objs/utils/utils.o objs/init/print_textures.o objs/init/init_textures_p1.o objs/move/key_pressed.o objs/move/move_p1.o objs/kill/kill.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 82):
 	@echo $(LILAS)"COMPILE MOI CE SO_LONG LA..."$(RESET)
 	cp $(LIBX_A_LINUX) $(NAME)
 	gcc $(NAME) $(OBJS) $(LIBX_A_LINUX) $(PRINTF_A) $(FLAGS) $(MLXFLAG_LINUX) -o so_long
 	@echo $(LIGHT_GREEN)"MALADE CA A COMPILER :)"$(RESET)
-	./so_long map/map_01.ber
+	./so_long map/map_base.ber
 
 # Not a target:
 .SUFFIXES:
@@ -2469,43 +2267,37 @@ so-long: objs/so_long.o objs/get_next_line/get_next_line_bonus.o objs/get_next_l
 #  Modification time never checked.
 #  File has not been updated.
 
-objs/init/init_textures_enemy.o: src/init/init_textures_enemy.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'init/init_textures_enemy'
-#  Last modified 2022-07-07 18:53:54.533061345
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 71):
-	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)init
-	@mkdir -p $(PATH_OBJS)kill
-	@mkdir -p $(PATH_OBJS)move
-	@mkdir -p $(PATH_OBJS)utils
-	@mkdir -p $(PATH_OBJS)get_next_line
-	$(CC) $(FLAGS) -I. -c $< -o $@
+so-long_b: objs_bonus/so_long.o objs_bonus/get_next_line/get_next_line_bonus.o objs_bonus/get_next_line/get_next_line_utils_bonus.o objs_bonus/utils/start.o objs_bonus/utils/utils.o objs_bonus/init/print_textures.o objs_bonus/init/init_textures_p1.o objs_bonus/init/init_enemy.o objs_bonus/init/init_textures_enemy.o objs_bonus/init/init_p1_anim.o objs_bonus/init/init_enemy_anim.o objs_bonus/move/key_pressed.o objs_bonus/move/move_p1.o objs_bonus/move/move_p1_anim.o objs_bonus/move/move_enemy_anim.o objs_bonus/kill/kill.o objs_bonus/kill/destroy_imgs.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 100):
+	@echo $(LILAS)"COMPILE MOI CE SO_LONG LA..."$(RESET)
+	cp $(LIBX_A_LINUX) $(NAME_B)
+	gcc $(NAME_B) $(OBJS_B) $(LIBX_A_LINUX) $(PRINTF_A) $(FLAGS) $(MLXFLAG_LINUX) -o so_long_b
+	@echo $(LIGHT_GREEN)"MALADE CA A COMPILER :)"$(RESET)
+	./so_long_b map/map_01.ber
 
 # Not a target:
-src/move/move_p1_anim.c:
-#  Implicit rule search has been done.
- 
-#  Last modified 2022-07-07 18:33:24.14126248
-#  File has been updated.
-#  Successfully updated.
+objs_bonus/get_next_line/get_next_line_bonus.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # files hash-table stats:
-# Load=46/1024=4%, Rehash=0, Collisions=0/138=0%
+# Load=42/1024=4%, Rehash=0, Collisions=6/99=6%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 104 / storage = 1705 B / avg = 16 B
-# current buf: size = 8162 B / used = 1705 B / count = 104 / avg = 16 B
+# strcache buffers: 1 (0) / strings = 63 / storage = 1078 B / avg = 17 B
+# current buf: size = 8162 B / used = 1078 B / count = 63 / avg = 17 B
 
-# strcache performance: lookups = 156 / hit rate = 33%
+# strcache performance: lookups = 96 / hit rate = 34%
 # hash-table stats:
-# Load=104/8192=1%, Rehash=0, Collisions=1/156=1%
-# Finished Make data base on Thu Jul  7 18:53:59 2022
+# Load=63/8192=1%, Rehash=0, Collisions=0/96=0%
+# Finished Make data base on Thu Jul  7 20:58:17 2022
 
  
