@@ -6,7 +6,7 @@
 #    By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/11 12:00:19 by nadesjar          #+#    #+#              #
-#    Updated: 2022/07/08 13:17:14 by nadesjar         ###   ########.fr        #
+#    Updated: 2022/07/08 21:18:41 by nadesjar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,8 +80,8 @@ all: $(PRINTF) $(NAME)
 
 $(NAME): $(OBJS)
 	@echo $(LILAS)"COMPILE MOI CE SO_LONG LA..."$(RESET)
-	cp $(LIBX_A_MAC) $(NAME)
-	gcc $(NAME) $(OBJS) $(LIBX_A_MAC) $(PRINTF_A) $(FLAGS) $(MLXFLAG_MAC) -o so_long
+	cp $(LIBX_A_LINUX) $(NAME)
+	gcc $(NAME) $(OBJS) $(LIBX_A_LINUX) $(PRINTF_A) $(FLAGS) $(MLXFLAG_LINUX) -o so_long
 	@echo $(LIGHT_GREEN)"MALADE CA A COMPILER :)"$(RESET)
 	@./so_long map/map_base.ber
 
@@ -98,8 +98,8 @@ b:$(NAME_B)
 
 $(NAME_B): $(OBJS_B)
 	@echo $(LILAS)"COMPILE MOI CE SO_LONG LA..."$(RESET)
-	cp $(LIBX_A_MAC) $(NAME_B)
-	gcc $(NAME_B) $(OBJS_B) $(LIBX_A_MAC) $(PRINTF_A) $(FLAGS) $(MLXFLAG_MAC) -o so_long_b
+	cp $(LIBX_A_LINUX) $(NAME_B)
+	gcc $(NAME_B) $(OBJS_B) $(LIBX_A_LINUX) $(PRINTF_A) $(FLAGS) $(MLXFLAG_LINUX) -o so_long_b
 	@echo $(LIGHT_GREEN)"MALADE CA A COMPILER :)"$(RESET)
 	@./so_long_b map/map_02.ber
 

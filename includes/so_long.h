@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 11:24:29 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 20:16:22 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/08 21:21:21 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ typedef struct s_ct {
 	int			ct;
 	int			wait;
 	int			error;
+	int			nbr_p1;
+	int			nbr_exit;
 	int			ct_enemy;
 	int			move_en;
 	int			move_p1;

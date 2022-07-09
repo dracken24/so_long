@@ -1,21 +1,15 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory '/home/dracken24/Desktop/prog/42_en_cours/so_long'
 make -C ./ft_printf
- 
 make[1]: Entering directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/ft_printf'
 make -C ./libft
- 
 make[2]: Entering directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/ft_printf/libft'
 make[2]: Nothing to be done for 'all'.
 make[2]: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/ft_printf/libft'
- 
 make[1]: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/ft_printf'
- 
-make -C ./libs/minilibx-linux
- 
-make[1]: Entering directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/libs/minilibx-linux'
-./configure
-make[1]: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/libs/minilibx-linux'
- 
+make -C ./libs/minilibx_opengl
+make[1]: Entering directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/libs/minilibx_opengl'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/so_long/libs/minilibx_opengl'
 make: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/so_long'
  

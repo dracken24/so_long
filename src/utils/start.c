@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 15:59:51 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/07/07 20:59:22 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/07/08 21:30:16 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,17 @@ void	find_hammer(t_game *game)
 		{
 			if (game->map_0[i][k] == 'C')
 				game->take.nbr_hammer++;
+			if (game->map_0[i][k] == 'P')
+				game->ct.nbr_p1++;
+			if (game->map_0[i][k] == 'E')
+				game->ct.nbr_exit++;
 		}
+	}
+	if (game->ct.nbr_exit > 1 || game->ct.nbr_p1 > 1)
+	{
+		ft_printf("Error, doublons\n");
+		free(game->map_0);
+		exit (0);
 	}
 }
 
@@ -76,6 +86,8 @@ void	init_var(t_game *game)
 {
 	game->tile_size = 64;
 	game->ct.ct = 0;
+	game->ct.nbr_exit = 0;
+	game->ct.error = 0;
 	game->img.pos_img.x = 0;
 	game->img.pos_img.y = 0;
 	game->ct.ct_idle.p1_dir = 2;
